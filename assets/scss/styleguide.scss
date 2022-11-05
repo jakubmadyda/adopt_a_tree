@@ -1,49 +1,264 @@
-@import './partials/variables';
-@import './partials/spacing';
+// ---------------------------------------------
+// STYLE GUIDE
+@use 'sass:math';
 
-.styleguide-nav {
-    position: relative;
-}
+@import "partials/functions";
+@import "partials/variables";
 
-.styleguide-sidebar {
-    padding-bottom: 150px;
-    height: 100vh;
+// Variables: Style Guide: Sidebar
+$styleguide-sidebar-width: toRem(200px);
+$z-index-styleguide-menu: 1000;
+
+
+// ---------------------------------------------
+// STYLE GUIDE: BUTTON TO TOGGLE SIDEBAR ON MOBILE
+
+.btn-styleguide-menu {
+    background-color: $gray-mist;
+    border-radius: 0;
+    height: $spacing-3;
     position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: $z-index-styleguide-menu;
+
+    @media(min-width: 600px) {
+        display: none;
+    }
+}
+
+
+// ---------------------------------------------
+// STYLE GUIDE: SIDEBAR
+
+.styleguide-sidebar {
+    background-color: $white;
+    font-weight: $font-semi-bold;
+    padding-bottom: 150px; // Prevents cutting off menu from the bottom on browsers like Firefox
+    width: $styleguide-sidebar-width;
+    height: 100vh;
+    position: fixed;
+    bottom: 0;
     overflow: auto;
-    z-index: 10;
-    width: 200px;
-    padding-left: 10px;
-    list-style-type: none;
+    z-index: $z-index-styleguide-menu;
+    transition: all 0.2s linear;
+
+    @media(max-width: 599px) {
+        left: -($styleguide-sidebar-width);
+        top: $spacing-3;
+    }
+
+    @media(min-width: 600px) {
+        left: 0;
+        top: 0;
+    }
+
+    a {
+        padding: $spacing-half $spacing;
+        display: block;
+
+        &.active {
+            color: $white;
+            background-color: $brand-2;
+        }
+    }
+}
+
+.styleguide-sidebar--show {
+    left: 0;
+    transition: all 0.2s linear;
+
+    @media(max-width: 599px) {
+        box-shadow: 0 4px 10px rgba($black, 0.1);
+    }
+}
+
+// Style Guide: Labels for Sidebar
+.styleguide-link-label {
+    color: $brand-2;
+    background: $gray-mist;
+    border-radius: 50%;
+    font-size: 10px;
+    font-weight: $font-bold;
+    padding: 2px $spacing-half;
+    margin-left: $spacing-half;
+    display: inline-block;
+}
+
+
+// ---------------------------------------------
+// STYLE GUIDE: CONTENT
+
+.styleguide-logo {
+    display: block;
+    margin: 0 auto $spacing-3;
+}
+
+.styleguide-heading {
+    text-align: center;
+    margin: 0;
 }
 
 .styleguide-content {
-    margin-left: 210px;
+    padding: ($spacing * 5) 0 $spacing-3 0;
+    max-width: 1200px;
+
+    @media(min-width: 600px) {
+        padding: $spacing-3 $spacing-2 0 ($styleguide-sidebar-width + $spacing-2);
+        margin: 0 auto;
+    }
+
+    pre {
+        white-space: pre-wrap;
+    }
 }
 
-.styleguide-demo-block {
+.styleguide-section {
+    padding: ($spacing * 6) 0 0 0;
 
+    > .styleguide-section-docs {
+        padding: 0 $spacing-2;
+    }
+
+    > h2 {
+        text-align: center;
+    }
 }
 
+.styleguide-section-docs {
+    max-width: 650px;
+    margin: 0 auto $spacing-2 auto;
+}
+
+.styleguide-section-block {
+    background-color: $white;
+    padding: $spacing-2;
+
+    > h3 {
+        color: $gray-cement;
+        text-align: center;
+        padding: 0 0 $spacing 0;
+    }
+
+    > h4 {
+        text-align: center;
+        margin-bottom: $spacing;
+    }
+}
+
+.styleguide-section-files {
+    font-style: italic;
+    text-align: center;
+    margin: 0 0 $spacing-2 0;
+}
+
+.styleguide-code-inline {
+    font-family: "Inconsolata", monospace;
+    background-color: $white;
+    padding: 0 ($spacing-half/2);
+}
+
+.styleguide-code-block {
+    background-color: $brand-1-x-light;
+    border: 1px solid $brand-1;
+    font-family: "Inconsolata", monospace;
+    font-size: $font-size;
+    padding: $spacing;
+    margin: $spacing 0 $spacing-2 0;
+    display: block;
+
+    // Only hide the selectors with a parent with class "styleguide-demo-block"
+    .styleguide-demo-block & {
+        display: none;
+    }
+}
+
+.styleguide-code-block--show {
+    // Only show the selectors with a parent with class "styleguide-demo-block"
+    .styleguide-demo-block & {
+        display: block;
+    }
+}
+
+// Style Guide Content: Dos and Don't
+.styleguide-dont, .styleguide-do {
+    font-weight: $font-bold;
+    text-transform: uppercase;
+}
+
+.styleguide-do {
+    color: $brand-1;
+}
+
+.styleguide-dont {
+    color: $red-crimson;
+}
+
+.btn-styleguide-code {
+    margin: $spacing-2 auto $spacing-3;
+    display: block;
+    width: 100px;
+}
+
+// Style Guide: Demo Block: Colors for background color boxes
 .styleguide-box-demo {
     width: 100px;
     height: 60px;
     display: inline-block;
-    margin: 10px;
-}
+    vertical-align: top;
+    margin: $spacing 0 $spacing-2;
 
-.styleguide-demo-each {
-    &--colors{
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-
+    &.white-bg, &.gray-mist-bg {
+        border: 1px solid $gray-cloud;
     }
 }
 
+// Style Guide: Demo Block: Colors: Modifier
+.styleguide-demo-each--colors {
+    font-size: $font-size-sm;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    > div {
+        padding: 0 7.5px;
+    }
+
+    .white, .gray-mist, .color-disabled {
+        background-color: $gray-lead;
+    }
+}
+
+// Style Guide: Demo Block: Spacing: Modifier
 .styleguide-demo-each--spacing {
     > div {
-        background-color:  $gray-mist;
+        background-color: $gray-mist;
         margin: 0 0 $spacing 0;
     }
+}
+
+// Style Guide: Demo Block: Containers: Modifier
+.styleguide-demo-each--containers {
+    > div {
+        margin-bottom: $spacing;
+        background-color: $brand-1-x-light;
+    }
+}
+
+// Style Guide: Demo Block: Auto Margins: Modifier
+.styleguide-demo-each--margin-auto {
+    > div {
+        background-color: $brand-1-x-light;
+        padding: $spacing;
+    }
+}
+
+ul > li {
+    list-style: none;
+}
+
+ul {
+    padding-left: 0;
 }
