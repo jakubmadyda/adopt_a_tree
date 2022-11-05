@@ -1,0 +1,73 @@
+//---------------------------
+// VARIABLES
+@import "functions";
+//---------------------------
+// VARIABLES: COLORS
+
+// Colors: brand
+$brand-1: #3ABB8D;
+$brand-1-light: #75C8AA;
+$brand-1-x-light: #C7E9DD;
+$brand-2: #313C5A;
+$brand-2-light: #41568C;
+
+// Colors: warm
+$red-crimson: #D05858;
+
+// Colors: cool
+$blue-aqua: #3E9CD0;
+
+// Colors: Black, White, Gray Spectrum
+$black: #000;
+$gray-coal: #222;
+$gray-lead: #666;
+$gray-cement: #999;
+$gray-titanium: #AAA;
+$gray-cloud: #DADEE8;
+$gray-mist: #F1F1F1;
+$white: #FFF;
+
+// Colors: typography
+$color-font: $gray-lead;
+$color-link: $brand-1;
+$color-link-hover: $brand-2-light;
+
+// Colors: states
+$color-focus: $brand-1-light;
+$color-error: $red-crimson;
+$color-success: $brand-1;
+$color-info: $brand-2-light;
+$color-disabled: $gray-mist;
+
+
+//---------------------------
+// VARIABLES: COLORS
+
+// Fonts: families
+$font-family-1: 'Nunito Sans', sans-serif;
+
+// Fonts: weight
+$font-regular: 400;
+$font-semi-bold: 600;
+$font-bold: 700;
+
+// Fonts: line-height
+$line-height: 1.35;
+
+// Fonts: sizes
+$font-size: toRem(14px);
+$font-size-sm: toRem(12px);
+$font-size-lg: toRem(16px);
+
+// Fonts: headings: sizes
+$h1: toRem(24px);
+$h2: toRem(22px);
+$h3: toRem(20px);
+$h4: toRem(18px);
+$h5: toRem(16px);
+$h6: toRem(14px);
+
+
+body {
+    font-size: $font-size-sm;
+}

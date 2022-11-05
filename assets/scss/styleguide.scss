@@ -1,0 +1,42 @@
+
+
+.styleguide-nav {
+    position: relative;
+}
+
+.styleguide-sidebar {
+    padding-bottom: 150px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    overflow: auto;
+    z-index: 10;
+    width: 200px;
+    padding-left: 10px;
+    list-style-type: none;
+}
+
+.styleguide-content {
+    margin-left: 210px;
+}
+
+.styleguide-demo-block {
+
+}
+
+.styleguide-box-demo {
+    width: 100px;
+    height: 60px;
+    display: inline-block;
+    margin: 10px;
+}
+
+.styleguide-demo-each {
+    &--colors{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+    }
+}
+

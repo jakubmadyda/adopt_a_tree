@@ -8,8 +8,87 @@
     <title>Adopt a Tree</title>
 
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/styleguide.css">
 </head>
 <body>
+
+<main class="main">
+    <div class="styleguide">
+            <nav class="styleguide-nav">
+                <ul class="styleguide-sidebar list-reset" id="js-styleguide-sidebar">
+                    <li><a href="#styleguide-section-guidelines">Guidelines</a></li>
+                    <li><a href="#styleguide-section-logo">Logo</a></li>
+                    <li><a href="#styleguide-section-colors">Colors</a></li>
+                    <li><a href="#styleguide-section-spacing">Spacing</a></li>
+                    <li><a href="#styleguide-section-alignment">Alignment</a></li>
+                    <li><a href="#styleguide-section-media">Media Queries</a></li>
+                    <li><a href="#styleguide-section-grid">Grid</a></li>
+                    <li><a href="#styleguide-section-accessibility">Accessibility</a></li>
+                    <li><a href="#styleguide-section-typography">Typography</a></li>
+                    <li><a href="#styleguide-section-images">Images</a></li>
+                    <li><a href="#styleguide-section-icons">Icons</a></li>
+                    <li><a href="#styleguide-section-buttons">Buttons</a></li>
+                    <li><a href="#styleguide-section-forms">Forms</a></li>
+                    <li><a href="#styleguide-section-content-blocks">Content Blocks</a></li>
+                    <li><a href="#styleguide-section-progress-bars">Progress Bars</a></li>
+                    <li><a href="#styleguide-section-avatars">Avatars</a></li>
+                    <li><a href="#styleguide-section-banners">Banners</a></li>
+                    <li><a href="#styleguide-section-lists">Lists: Styled</a></li>
+                    <li><a href="#styleguide-section-cards">Cards</a></li>
+                    <li><a href="#styleguide-section-loading">Loading</a></li>
+                    <li><a href="#styleguide-section-tabs">Tabs <span class="styleguide-link-label">JS</span></a></li>
+                    <li><a href="#styleguide-section-sliders">Sliders &amp; Carousels <span class="styleguide-link-label">JS</span></a></li>
+                </ul>
+            </nav>
+
+            <section class="styleguide-content">
+                <section id="styleguide-section-guidelines" class="styleguide-section">
+                    <h2>Guidelines</h2>
+                </section>
+
+                <section id="styleguide-section-colors" class="styleguide-section">
+                    <h2>Colors</h2>
+                    <div class="stylguide-section-docs">
+                        <p>Use variables or classes for colors.</p>
+                        <p>Background colors have a <code class="styleguide-code-inline">-bg</code> suffix.</p>
+                        <p>To incorporate a new color, add the color variable to the <em>variables</em> partial and refer to it in the Sass map inside the <em>colors</em> partial.</p>
+                    </div>
+
+                    <div class="styleguide-section-block">
+                        <div class="styleguide-section-files">Reference files: variables.scss</div>
+
+                        <h3>Colors: Brand</h3>
+                        <div class="styleguide-demo-block">
+                            <div class="styleguide-demo-each styleguide-demo-each--colors">
+                                <div>
+                                    <div class="brand-1">$brand-1</div>
+                                    <div class="styleguide-box-demo brand-1-bg"></div>
+                                </div>
+                                <div>
+                                    <div class="brand-1-light">$brand-1-light</div>
+                                    <div class="styleguide-box-demo brand-1-light-bg"></div>
+                                </div>
+                                <div>
+                                    <div class="brand-1-x-light">$brand-1-x-light</div>
+                                    <div class="styleguide-box-demo brand-1-x-light-bg"></div>
+                                </div>
+                                <div>
+                                    <div class="brand-2">$brand-2</div>
+                                    <div class="styleguide-box-demo brand-2-bg"></div>
+                                </div>
+                                <div>
+                                    <div class="brand-2-light">$brand-2-light</div>
+                                    <div class="styleguide-box-demo brand-2-light-bg"></div>
+                                </div>
+                            </div>
+                            <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                        </div>
+                    </div>
+                </section>
+
+            </section>
+    </div>
+</main>
 
 </body>
 </html>
