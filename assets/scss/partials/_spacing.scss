@@ -1,0 +1,53 @@
+//---------------------------
+// Spacing
+
+@import 'variables';
+
+// Sass Map to store spacing values
+$spacing-map: (
+    "spacing": $spacing,
+    "spacing-2": $spacing-2,
+    "spacing-3": $spacing-3,
+    "spacing-half": $spacing-half,
+);
+
+// @each Sass loop to generate classes
+@each $name, $value in $spacing-map {
+
+    // Spacing: all sides
+    .#{$name} {
+        padding: $value;
+    }
+
+    // Spacing: horizontal
+    .#{$name}-h {
+        padding-inline: $value;
+    }
+
+    // Spacing: vertical
+    .#{$name}-v {
+        padding-top: $value;
+        padding-bottom: $value;
+    }
+
+    // Spacing: left
+    .#{$name}-l {
+        padding-left: $value;
+    }
+
+    // Spacing: right
+    .#{$name}-r {
+        padding-right: $value;
+    }
+
+    // Spacing: top
+    .#{$name}-t {
+        padding-top: $value;
+    }
+
+    // Spacing: bottom
+    .#{$name}-b {
+        padding-bottom: $value;
+    }
+
+}

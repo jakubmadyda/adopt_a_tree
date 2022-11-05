@@ -1,6 +1,9 @@
 //---------------------------
 // VARIABLES
+@use 'sass:math';
 @import "functions";
+
+
 //---------------------------
 // VARIABLES: COLORS
 
@@ -68,6 +71,12 @@ $h5: toRem(16px);
 $h6: toRem(14px);
 
 
-body {
-    font-size: $font-size-sm;
-}
+//-------------------
+// VARIABLES: Spacing
+// Use for paddings, margins, etc.
+
+$spacing: toRem(10px);
+$spacing-2: ($spacing * 2);
+$spacing-3: ($spacing * 3);
+$spacing-half: math.div($spacing, 2);
+
