@@ -1,0 +1,23 @@
+{
+  "name": "adopt_a_tree",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./assets/scss/main.scss ./assets/css/style.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jakubmadyda/adopt_a_tree.git"
+  },
+  "author": "Jakub Madyda",
+  "license": "Beerware",
+  "bugs": {
+    "url": "https://github.com/jakubmadyda/adopt_a_tree/issues"
+  },
+  "homepage": "https://github.com/jakubmadyda/adopt_a_tree#readme",
+  "devDependencies": {
+    "sass": "^1.56.0"
+  }
+}
