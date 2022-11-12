@@ -83,6 +83,7 @@
     display: block;
     width: 100%;
     transition: $transition-linear;
+    box-sizing: border-box;
 
     @include input-placeholder {
         color: $color-input-placeholder;
@@ -104,6 +105,44 @@ textarea {
     min-height: toRem(110px);
     resize: vertical;
 }
+
+// ---------------------------------------------
+// FORMS: INPUTS: GROUP
+// Use for text inputs and textareas with a label or icon that appears to be inside the input
+
+// Input Group Mixin
+//  - All parameters have defaults
+//  - Parameters:
+//    - $color {string} : Text color
+//    - $color-bg {string} : Background color
+//    - $color-border {string} : Border color
+
+@mixin input-group ($color: $color-font, $color-bg: $white, $color-border: $color-input-border) {
+    color: $color;
+    background-color: $color-bg;
+    border: toRem(1px) solid $color-border;
+    border-radius: $border-radius-xl;
+    display: flex;
+}
+
+.input-group {
+    @include input-group;
+}
+
+
+.input-group-text {
+    @include  form-text($color-bg: transparent);
+    border: none;
+}
+
+.input-group-label {
+    color: $gray-cement;
+    font-weight: $font-bold;
+    text-transform: uppercase;
+    padding: 0 ($spacing * 1.5);
+    align-self: center;
+}
+
 
 
 
