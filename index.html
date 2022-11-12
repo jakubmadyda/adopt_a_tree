@@ -845,6 +845,342 @@
                 </div> <!-- /.styleguide-section-block -->
             </section>
 
+            <section id="styleguide-section-grid" class="styleguide-section">
+                <h2>Grid</h2>
+                <div class="styleguide-section-docs">
+                    <p>To create a grid structure, start with a container, include a row and add columns. Use flex helpers with rows or float helpers with columns.</p>
+                    <p>A 12 column grid is provided with classes for each media query breakpoint. E.g. <code class="styleguide-code-inline">col-12</code>, <code class="styleguide-code-inline">col-6-sm</code>, <code class="styleguide-code-inline">col-4-mid</code> and <code class="styleguide-code-inline">col-3-lg</code>.</p>
+                    <p>To change the number of columns, change the value of the <code class="styleguide-code-inline">grid-column-count</code> variable in the <em>variables</em> partial. Doing so will automatically create new columns across all breakpoints. For example, you could change the numbers of columns from 6 to 12 or 24.</p>
+                </div>
+                <div class="styleguide-section-block">
+                    <div class="styleguide-section-files">Reference files: _grid.scss, _variables.scss</div>
+
+                    <h3>Grid: Containers</h3>
+                    <div class="styleguide-section-docs">
+                        <p>Container sizes are obtained from the media query variables.</p>
+                        <p>Each container is horizontally centered and has left and right padding.</p>
+                        <p>A full-width container also exists for sections that span the entire width of the screen.</p>
+                    </div>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each styleguide-demo-each--containers">
+                            <div class="container-lg">Container: Large: Most Common Size</div>
+                            <div class="container-mid">Container: Mid</div>
+                            <div class="container-sm">Container: Small</div>
+                            <div class="container-full">Container: Full Width</div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h3>Grid: Rows &amp; Columns: Default</h3>
+                    <div class="styleguide-section-docs">
+                        <p>Rows include clearfix functionality. A seperate clearfix mixin and class is available for use.</p>
+                        <p>Rows have negative margins to offset the left and right padding of the first and last columns respectively.</p>
+                        <p>Columns have a left and right padding that acts as gutters.</p>
+                        <p>Rows and columns have default, small and large gutters.</p>
+                    </div>
+
+                    <h4>Rows &amp; Columns: Default Gutters</h4>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <div class="row flex">
+                                <div class="col spacing-v">
+                                    <div class="spacing gray-mist-bg">Column 1</div>
+                                </div>
+                                <div class="col spacing-v">
+                                    <div class="spacing gray-mist-bg">Column 2</div>
+                                </div>
+                            </div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h4>Rows &amp; Columns: Small Gutters</h4>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <div class="row-sm flex">
+                                <div class="col-sm spacing-v">
+                                    <div class="spacing gray-mist-bg">Column 1</div>
+                                </div>
+                                <div class="col-sm spacing-v">
+                                    <div class="spacing gray-mist-bg">Column 2</div>
+                                </div>
+                            </div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h4>Rows &amp; Columns: Large Gutters</h4>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <div class="row-lg flex">
+                                <div class="col-lg spacing-b">
+                                    <div class="spacing gray-mist-bg">Column 1</div>
+                                </div>
+                                <div class="col-lg spacing-b">
+                                    <div class="spacing gray-mist-bg">Column 2</div>
+                                </div>
+                            </div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h4>Columns: Column 2 automatically fills up remaining width</h4>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <div class="row flex">
+                                <div class="col spacing-v">
+                                    <div class="spacing gray-mist-bg">Column 1</div>
+                                </div>
+                                <div class="col spacing-v flex-1">
+                                    <div class="spacing gray-mist-bg">Column 2</div>
+                                </div>
+                            </div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h4>Columns: Column 2 is pushed to the right</h4>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <div class="row flex">
+                                <div class="col spacing-v">
+                                    <div class="spacing gray-mist-bg">Column 1</div>
+                                </div>
+                                <div class="col spacing-v margin-left-auto">
+                                    <div class="spacing gray-mist-bg">Column 2</div>
+                                </div>
+                            </div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h4>Columns: Columns: Horizontally centered</h4>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <div class="row flex flex-justify-center">
+                                <div class="col spacing-v">
+                                    <div class="spacing gray-mist-bg">Column 1</div>
+                                </div>
+                                <div class="col spacing-v">
+                                    <div class="spacing gray-mist-bg">Column 2</div>
+                                </div>
+                            </div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h4>Columns: Vertically centered</h4>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <div class="row flex flex-align-center">
+                                <div class="col spacing-v">
+                                    <div class="spacing gray-mist-bg">Column 1</div>
+                                </div>
+                                <div class="col spacing-v">
+                                    <div class="spacing gray-mist-bg">
+                                        <p>Column 2: Flexbox: Vertical Centering <br>
+                                            Notice how the two containers are vertically centered with flexbox. Flexbox makes horizontal and vertical centering easy as pie! It's the coolest thing since floats. And it allows elements to squeeze and stretch to fill up space as needed.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora cumque adipisci atque ab quam, non, maiores nostrum. Necessitatibus, sit quae magnam nesciunt totam culpa reiciendis amet molestiae libero natus iusto.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita soluta dolores nostrum, autem illum, aut a debitis tempore sunt enim quasi quos explicabo quae quaerat itaque cumque sit repellendus eaque.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h4>Columns: Halves</h4>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <div class="row flex flex-wrap">
+                                <div class="col col-6 spacing-v">
+                                    <div class="spacing gray-mist-bg">Column 1</div>
+                                </div>
+                                <div class="col col-6 spacing-v">
+                                    <div class="spacing gray-mist-bg">Column 2</div>
+                                </div>
+                            </div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h4>Columns: Thirds</h4>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <div class="row flex flex-wrap">
+                                <div class="col col-4 spacing-v">
+                                    <div class="spacing gray-mist-bg">Column 1</div>
+                                </div>
+                                <div class="col col-4 spacing-v">
+                                    <div class="spacing gray-mist-bg">Column 2</div>
+                                </div>
+                                <div class="col col-4 spacing-v">
+                                    <div class="spacing gray-mist-bg">Column 3</div>
+                                </div>
+                            </div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h4>Columns: Different sizes on different breakpoints</h4>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <div class="row flex flex-wrap">
+                                <div class="col col-12 col-6-sm col-4-mid col-3-lg spacing-v">
+                                    <div class="spacing gray-mist-bg">Column 1</div>
+                                </div>
+                                <div class="col col-12 col-6-sm col-4-mid col-3-lg spacing-v">
+                                    <div class="spacing gray-mist-bg">Column 2</div>
+                                </div>
+                                <div class="col col-12 col-6-sm col-4-mid col-3-lg spacing-v">
+                                    <div class="spacing gray-mist-bg">Column 3</div>
+                                </div>
+                                <div class="col col-12 col-6-sm col-4-mid col-3-lg spacing-v">
+                                    <div class="spacing gray-mist-bg">Column 4</div>
+                                </div>
+                            </div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                </div> <!-- /.styleguide-section-block -->
+            </section>
+
+            <section id="styleguide-section-typography" class="styleguide-section">
+                <h2>Typography</h2>
+                <div class="styleguide-section-docs">
+                    <p>Typography consists of helper classes for text styling and basic styling for HTML elements like headings, lists and paragraphs.</p>
+                </div>
+                <div class="styleguide-section-block">
+                    <div class="styleguide-section-files">Reference files: _functions.scss, _typography.scss, _variables.scss</div>
+
+                    <h3>Typography: Font Families</h3>
+                    <div class="styleguide-section-docs">
+                        <p>Use a variable or class for font families.</p>
+                        <p><em>Nunito Sans</em> is the default font for the project and is available via <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>.</p>
+                    </div>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <div class="font-family-1">$font-family-1</div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h3>Typography: Font Sizes</h3>
+                    <div class="styleguide-section-docs">
+                        <p>Use variables or classes for font sizes.</p>
+                        <p>The base font size is in pixels and the rest use the <code class="styleguide-code-inline">px-to-percent</code> function to output pixel values as percentages.</p>
+                    </div>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <div class="font-size">$font-size</div>
+                            <div class="font-size-sm">$font-size-sm</div>
+                            <div class="font-size-xs">$font-size-xs</div>
+                            <div class="font-size-lg">$font-size-lg</div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h3>Typography: Font Weights</h3>
+                    <div class="styleguide-section-docs">
+                        <p>Use variables and classes for font weights.</p>
+                    </div>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <div class="font-regular">$font-regular</div>
+                            <div class="font-semi-bold">$font-semi-bold</div>
+                            <div class="font-bold">$font-bold</div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h3>Typography: Text Styles</h3>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <div class="text-left">Text: Left Align</div>
+                            <div class="text-right">Text: Right Align</div>
+                            <div class="text-center">Text: Center Align</div>
+                            <div class="text-uppercase">Text: Uppercase</div>
+                            <div class="text-underline">Text: Underline</div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h3>Typography: Headings</h3>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <h1>Heading 1</h1>
+                            <h2>Heading 2</h2>
+                            <h3>Heading 3</h3>
+                            <h4>Heading 4</h4>
+                            <h5>Heading 5</h5>
+                            <h6>Heading 6</h6>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h3>Typography: Paragraphs</h3>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <p>Paragraph: Here's what a paragraph of text looks like.</p>
+                            <p>Paragraph: Here's what a second paragraph of text looks like.</p>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h3>Typography: Links</h3>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <a href="#">Link</a>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <span class="link">Class to make something resemble a link</span>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <a href="#" class="link-action">
+                                <span class="at-icon-arrow-right link-action-icon"></span>
+                                <span class="link-action-text font-size-sm">Read More</span>
+                            </a>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h3>Typography: Lists</h3>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <ul>
+                                <li>Unordered List: Item 1</li>
+                                <li>Unordered List: Item 2</li>
+                                <li>Unordered List: Item 3</li>
+                            </ul>
+
+                            <ol>
+                                <li>Ordered List: Item 1</li>
+                                <li>Ordered List: Item 2</li>
+                                <li>Ordered List: Item 3</li>
+                            </ol>
+
+                            <ul class="list-reset">
+                                <li>List: Reset Styles: Item 1</li>
+                                <li>List: Reset Styles: Item 2</li>
+                                <li>List: Reset Styles: Item 3</li>
+                            </ul>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                </div> <!-- /.styleguide-section-block -->
+            </section>
+
+
         </section>
 
     </div>

@@ -120,7 +120,7 @@ textarea {
 //    - $color-bg {string} : Background color
 //    - $color-border {string} : Border color
 
-@mixin input-group ($color: $color-font, $color-bg: $white, $color-border: $color-input-border) {
+@mixin input-group($color: $color-font, $color-bg: $white, $color-border: $color-input-border) {
     color: $color;
     background-color: $color-bg;
     border: toRem(1px) solid $color-border;
