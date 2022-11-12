@@ -575,6 +575,105 @@
                 </div> <!-- /.styleguide-section-block -->
             </section>
 
+            <section id="styleguide-section-buttons" class="styleguide-section">
+                <h2>Buttons</h2>
+                <div class="styleguide-section-docs">
+                    <p>Add button classes to anchors, buttons or any appropriate HTML element.</p>
+                    <p>If you must use elements like <code class="styleguide-code-inline">div</code> and <code class="styleguide-code-inline">span</code> for buttons, add an attribute of <code class="styleguide-code-inline">role="button"</code> for screen readers.</p>
+                    <p>Buttons can be of different colors.</p>
+                    <p>Buttons can be of different sizes (default, small, extra small and full-width).</p>
+                    <p>Buttons can be solid or hollow.</p>
+                    <p>Buttons can have disabled styles attached to them.</p>
+                    <p>Buttons can have their styles reset so they no longer resemble buttons.</p>
+                    <p>Each button uses a base <code class="styleguide-code-inline">btn</code> class and modifier classes.</p>
+                    <p>To create a new solid or hollow button of a different color, create a new modifier class and call the <code class="styleguide-code-inline">btn-solid</code> mixin or <code class="styleguide-code-inline">btn-hollow</code> mixin. Include arguments as needed.</p>
+                </div>
+                <div class="styleguide-section-block">
+                    <div class="styleguide-section-files">Reference files: _buttons.scss, _variables.scss</div>
+
+                    <h3>Buttons: Brand 1</h3>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each styleguide-demo-each--buttons">
+                            <button class="btn btn--brand-1" type="submit">Button</button>
+                            <a href="#" class="btn btn--brand-1 btn--sm">Button: Small</a>
+                            <div class="btn btn--brand-1 btn--xs" tabindex="0" role="button">Button: Extra Small</div>
+                            <span class="btn btn--brand-1 full-width" tabindex="0" role="button">Button: Full Width</span>
+                            <input type="submit" class="btn btn--brand-1 btn--disabled" value="Button: Disabled" disabled>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h3>Buttons: Brand 2</h3>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each styleguide-demo-each--buttons">
+                            <button class="btn btn--brand-2" type="submit">Button</button>
+                            <a href="#" class="btn btn--brand-2 btn--sm">Button: Small</a>
+                            <div class="btn btn--brand-2 btn--xs" tabindex="0" role="button">Button: Extra Small</div>
+                            <span class="btn btn--brand-2 full-width" tabindex="0" role="button">Button: Full Width</span>
+                            <input type="submit" class="btn btn--brand-2 btn--disabled" value="Button: Brand 2: Disabled" disabled>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h3>Buttons: White</h3>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each styleguide-demo-each--buttons">
+                            <button class="btn btn--white">Button: White</button>
+                            <a href="#" class="btn btn--white btn--sm">Button: White: Small</a>
+                            <div class="btn btn--white btn--xs" tabindex="0" role="button">Button: White: Extra Small</div>
+                            <span class="btn btn--white full-width" tabindex="0" role="button">Button: White: Full Width</span>
+                            <input type="submit" class="btn btn--white btn--disabled" value="Button: White: Disabled" disabled>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h3>Buttons: Hollow: Brand 1</h3>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each styleguide-demo-each--buttons">
+                            <button class="btn btn-hollow--brand-1" type="submit">Button</button>
+                            <a href="#" class="btn btn-hollow--brand-1 btn--sm">Button: Small</a>
+                            <div class="btn btn-hollow--brand-1 btn--xs" tabindex="0" role="button">Button: Extra Small</div>
+                            <span class="btn btn-hollow--brand-1 full-width" tabindex="0" role="button">Button: Full Width</span>
+                            <input type="submit" class="btn btn-hollow--brand-1 btn--disabled" value="Button: Hollow: Disabled" disabled>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h3>Buttons: Hollow: Brand 2</h3>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each styleguide-demo-each--buttons">
+                            <button class="btn btn-hollow--brand-2" type="submit">Button</button>
+                            <a href="#" class="btn btn-hollow--brand-2 btn--sm">Button: Small</a>
+                            <div class="btn btn-hollow--brand-2 btn--xs" tabindex="0" role="button">Button: Extra Small</div>
+                            <span class="btn btn-hollow--brand-2 full-width" tabindex="0" role="button">Button: Full Width</span>
+                            <input type="submit" class="btn btn-hollow--brand-2 btn--disabled" value="Button: Hollow: Disabled" disabled>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h3>Buttons: Hollow: White</h3>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each styleguide-demo-each--buttons gray-lead-bg">
+                            <button class="btn btn-hollow--white" type="submit">Button</button>
+                            <a href="#" class="btn btn-hollow--white btn--sm">Button: Small</a>
+                            <div class="btn btn-hollow--white btn--xs" tabindex="0" role="button">Button: Extra Small</div>
+                            <span class="btn btn-hollow--white full-width" tabindex="0" role="button">Button: Full Width</span>
+                            <input type="submit" class="btn btn-hollow--white btn--disabled" value="Button: Hollow: White: Disabled" disabled>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h3>Buttons: Reset Styles</h3>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each styleguide-demo-each--buttons">
+                            <button class="btn-reset">Button: Reset All Styles</button>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                </div> <!-- /.styleguide-section-block -->
+            </section>
+
         </section>
 
     </div>

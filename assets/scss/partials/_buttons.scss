@@ -1,0 +1,175 @@
+//---------------------------
+// BUTTONS
+
+@import "variables";
+
+//---------------------------
+// BUTTONS: default styling
+
+@mixin btn-base {
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: $border-radius-xl;
+    border: toRem(1px) solid;
+    font-size: $font-size;
+    font-family: $font-family-1;
+    font-weight: $font-bold;
+    line-height: $line-height;
+    padding: $btn-padding-v $btn-padding-h;
+    transition: $transition-linear;
+
+    &:hover, &:focus {
+        transition: $transition-ease-in;
+    }
+
+    &:focus {
+        outline: toRem(1px) solid $color-focus;
+    }
+}
+
+.btn {
+    @include btn-base;
+}
+
+//-----------------
+// BUTTONS: solid
+// use for buttons with solid background colors
+// all parameters have defaults
+// parameters:
+//  - $color {string}: text color (hex css color etc.)
+//  -$color-bg {string}: background color
+//  -$color-bg-hover {string}: background color on hover
+//  -$color-border {string}: border color: background color is default
+
+@mixin btn-solid($color: $white, $color-bg: $brand-1, $color-bg-hover: $brand-1-light, $color-border: $color-bg){
+    color: $color;
+    background-color: $color-bg;
+    border-color: $color-border;
+    box-shadow: $box-shadow;
+
+    &:hover, &:focus {
+        color: $color;
+        background-color: $color-bg-hover;
+        border-color: $color-bg-hover;
+    }
+}
+
+@mixin btn--brand-1 {
+    @include btn-solid;
+}
+
+.btn--brand-1 {
+    @include btn--brand-1;
+}
+
+@mixin btn--brand-2 {
+    @include btn-solid($color-bg: $brand-2, $color-bg-hover: $brand-2-light);
+}
+
+.btn--brand-2 {
+    @include btn--brand-2;
+}
+
+@mixin btn--white {
+    @include btn-solid($color: $brand-1, $color-bg: $white, $color-bg-hover: $gray-mist);
+}
+.btn--white {
+    @include btn--white;
+}
+
+//-----------------
+// BUTTONS: hollow
+// use for buttons with hollow background colors
+// all parameters have defaults
+// parameters:
+//  - $color {string}: text color (hex css color etc.)
+//  -$color-hover {string}: text color on hover
+//  -$color-border {string}: border color: text color is default
+
+@mixin btn-hollow($color: $color-font, $color-hover: $gray-cement, $color-border: $color) {
+    color: $color;
+    background-color: transparent;
+    border-color: $color-border;
+
+    &:hover, &:focus {
+        color: $color-hover;
+    }
+}
+
+@mixin btn-hollow--brand-1 {
+    @include btn-hollow($color: $brand-1, $color-hover: $brand-1-light);
+}
+
+.btn-hollow--brand-1 {
+    @include btn-hollow--brand-1;
+}
+
+@mixin btn-hollow--brand-2 {
+    @include btn-hollow($color: $brand-2, $color-hover: $brand-2-light);
+}
+
+.btn-hollow--brand-2 {
+    @include btn-hollow--brand-2;
+}
+
+@mixin btn-hollow--white {
+    @include btn-hollow($color: $white, $color-hover: $gray-cloud);
+}
+
+.btn-hollow--white {
+    @include btn-hollow--white;
+}
+
+//--------------
+// BUTTONS: size modifiers
+
+@mixin btn--sm {
+    font-size: $font-size-sm;
+    padding: $btn-padding-v-sm $spacing-3;
+}
+
+.btn--sm {
+    @include btn--sm;
+}
+
+@mixin btn--xs {
+    font-size: $font-size-xs;
+    padding: $btn-padding-v-xs $btn-padding-h-xs;
+    line-height: 1.2;
+}
+
+.btn--xs {
+    @include btn--xs;
+}
+
+.btn--disabled {
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+@mixin btn-reset {
+    color: $color-font;
+    background: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    font-family: $font-family-1;
+    font-size: $font-size;
+    font-weight: $font-regular;
+    line-height: $line-height;
+    text-align: left;
+    text-transform: inherit;
+    padding: 0;
+
+    &:hover {
+        color: $color-focus;
+        background: none;
+    }
+}
+
+.btn-reset {
+    @include btn-reset;
+}

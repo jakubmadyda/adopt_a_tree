@@ -59,6 +59,7 @@ $line-height: 1.35;
 
 // Fonts: sizes
 $font-size: toRem(14px);
+$font-size-xs: toRem(10px);
 $font-size-sm: toRem(12px);
 $font-size-lg: toRem(16px);
 
@@ -97,3 +98,22 @@ $spacing-half: math.div($spacing, 2);
 $transition-linear: all 200ms linear;
 $transition-ease-in: all 200ms ease-in;
 
+//-----------------
+// VARIABLES: Border radius
+$border-radius: toRem(10px);
+$border-radius-lg: ($border-radius * 2);
+$border-radius-xl: ($border-radius * 3);
+
+//-----------------
+// VARIABLES: Buttons
+$btn-padding-v: $spacing;
+$btn-padding-v-sm: $spacing-half;
+$btn-padding-v-xs: $spacing-half;
+
+$btn-padding-h: $spacing-3;
+$btn-padding-h-sm: math.div($spacing-3, 2);
+$btn-padding-h-xs: math.div($spacing-3, 2);
+
+// VARIABLES: box-shadow
+
+$box-shadow: 0 toRem(4px) toRem(10px) rgba($black, 0.1)

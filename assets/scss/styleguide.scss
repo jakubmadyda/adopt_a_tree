@@ -199,7 +199,7 @@ $z-index-styleguide-menu: 1000;
 .btn-styleguide-code {
     margin: $spacing-2 auto $spacing-3;
     display: block;
-    width: 100px;
+    min-width: 100px;
 }
 
 // Style Guide: Demo Block: Colors for background color boxes
