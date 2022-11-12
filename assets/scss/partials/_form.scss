@@ -1,0 +1,62 @@
+//---------------------------
+// FORM
+
+@import "variables";
+
+//---------------------------
+// FORM: fields
+
+.field {
+    margin-bottom: $spacing-2;
+}
+
+//---------------------------
+// FORM: labels
+
+.label {
+    color: $gray-coal;
+    font-weight: $font-bold;
+    margin-bottom: $spacing;
+    display: block;
+
+    &--lg {
+        font-size: $font-size-lg;
+    }
+    &--inverse {
+        color: $white;
+    }
+}
+
+//---------------------------
+// FORM: placeholder
+
+// use the mixin like this:
+// @include input-placeholder {color: red;}
+@mixin input-placeholder {
+    &.placeholder {
+        @content;
+    }
+
+    &:-moz-placeholder {
+        @content;
+    }
+
+    &::-moz-placeholder {
+        @content;
+    }
+
+    &:-ms-input-placeholder {
+        @content;
+    }
+
+    &::-webkit-input-placeholder {
+        @content;
+    }
+}
+
+@mixin form-focus {
+    outline: 0;
+    border: toRem(1px) solid $color-focus;
+    transition: $transition-linear;
+}
+
