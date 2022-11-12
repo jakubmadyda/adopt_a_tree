@@ -84,6 +84,9 @@
     width: 100%;
     transition: $transition-linear;
     box-sizing: border-box;
+    &:focus {
+        outline: none;
+    }
 
     @include input-placeholder {
         color: $color-input-placeholder;
@@ -143,6 +146,41 @@ textarea {
     align-self: center;
 }
 
+// ---------------------------------------------
+// FORMS: TEXT INPUTS, TEXTAREAS, SELECTS: SIZES
 
+@mixin form-text--sm {
+    font-size: $font-size-sm;
+    padding: $btn-padding-v-xs $spacing;
+}
 
+.form-text--sm {
+    @include form-text--sm;
+}
+
+// ---------------------------------------------
+// FORMS: INPUT: FILE: CUSTOM: WITH IMAGE PREVIEW
+
+.input-file {
+    opacity: 0;
+    position: absolute;
+}
+
+.input-file-label {
+    font-size: $font-size-lg;
+    text-transform: capitalize;
+    padding-inline: ($spacing * 6);
+    position: relative;
+}
+
+.input-file-img {
+    border-radius: 50%;
+    width: toRem(46px);
+    height: toRem(46px);
+    display: block;
+    position: absolute;
+    left: toRem(-2px);
+    top: toRem(-1px);
+    object-fit: cover;
+}
 
