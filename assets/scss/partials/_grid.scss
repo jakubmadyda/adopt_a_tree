@@ -1,0 +1,42 @@
+// ---------------------------------------------
+// GRID
+
+@import "variables";
+
+// ---------------------------------------------
+// GRID: CONTAINERS
+//  - Wrap a row in a container
+
+// Container: Mixin
+//  - All parameters have defaults
+//  - Parameters:
+//    - $max-width {number} : Maximum width
+//    - $grid-gutter {number} : Gutter or horizontal padding
+
+@mixin container($max-width: $media-lg, $grid-gutter: $grid-gutter) {
+
+    @if $max-width {
+        max-width: $max-width;
+    }
+
+    margin-inline: auto;
+    padding-inline: $spacing-2;
+
+}
+
+.container-lg {
+    @include container;
+
+}
+
+.container-mid {
+    @include container($media-md);
+}
+
+.container-sm {
+    @include container($media-sm);
+}
+
+.container-full {
+    @include container($max-width: false);
+}
