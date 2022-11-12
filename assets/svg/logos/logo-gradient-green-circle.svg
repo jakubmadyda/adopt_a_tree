@@ -1,0 +1,14 @@
+<svg width="144" height="144" viewBox="0 0 144 144" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="svg-adopt-a-tree-logo-circle">
+  <title id="svg-adopt-a-tree-logo-circle">Adopt a Tree: Logo</title>
+  <circle cx="72" cy="72" r="72" fill="#C4C4C4"/>
+  <circle cx="72" cy="72" r="72" fill="url(#paint0_angular)"/>
+  <path d="M101.545 72.3423C105.513 68.3743 107.742 62.9925 107.742 57.3809C107.742 51.7693 105.513 46.3875 101.545 42.4195C97.5765 38.4515 92.1948 36.2223 86.5831 36.2223C80.9715 36.2223 75.5898 38.4515 71.6218 42.4195L47.8315 66.2097V96.1677H77.7896L101.545 72.3423Z" fill="#3ABB8D" stroke="white" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M86.6014 57.3986L37.2588 106.741" stroke="white" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <defs>
+    <radialGradient id="paint0_angular" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(72 72) rotate(90) scale(72)">
+    <stop offset="0.0780298" stop-color="#3ABB8D"/>
+    <stop offset="0.494792" stop-color="#9EDCC6"/>
+    <stop offset="1" stop-color="#3ABB8D" stop-opacity="0.66"/>
+    </radialGradient>
+  </defs>
+</svg>

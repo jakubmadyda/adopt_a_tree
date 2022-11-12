@@ -91,8 +91,19 @@
 
 .form-text {
     @include form-text;
+    &--select {
+        background-image: url("#{$svg-path}/icons/icon-chevron-down.svg");
+        background-repeat: no-repeat;
+        background-position: right $spacing center;
+        background-size: toRem(18px);
+        appearance: none;
+    }
 }
 
+textarea {
+    min-height: toRem(110px);
+    resize: vertical;
+}
 
 
 
