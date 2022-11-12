@@ -674,6 +674,177 @@
                 </div> <!-- /.styleguide-section-block -->
             </section>
 
+            <section id="styleguide-section-forms" class="styleguide-section">
+                <h2>Forms</h2>
+                <div class="styleguide-section-docs">
+                    <p>Wrap form elements in a <code class="styleguide-code-inline">form</code> tag.</p>
+                    <p>Use the <code class="styleguide-code-inline">field</code> class to add a bottom margin to form elements.</p>
+                    <p>Text-based inputs, textareas and selects use the <code class="styleguide-code-inline">form-text</code> class for styling and the same classes for sizes, variants and states.</p>
+                    <p>Inverse styling classes are also available.</p>
+                    <p>Ensure the <code class="styleguide-code-inline">for</code> attribute of a label matches the <code class="styleguide-code-inline">ID</code> attribute of the input associated with it.</p>
+                </div>
+                <div class="styleguide-section-block">
+                    <div class="styleguide-section-files">Reference files: _forms.scss, _variables.scss</div>
+                    <h3>Forms: Labels</h3>
+                    <div class="styleguide-section-docs">
+                        <p>For demo purposes, the labels below have no <code class="styleguide-code-inline">for</code> attribute, since no input is associated with them.</p>
+                    </div>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <label class="label">Label: Default</label>
+                            <label class="label label--lg">Label: Size: Large</label>
+                            <label class="label form-required">Label: Required</label>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+                    <h3>Forms: Inputs</h3>
+                    <h4>Inputs: Default</h4>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <div class="field">
+                                <label for="demo-input-default" class="label">Input: Default</label>
+                                <input type="text" class="form-text" placeholder="Placeholder Text" id="demo-input-default">
+                            </div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+                    <h4>Inputs: Sizes</h4>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <div class="field">
+                                <label for="demo-input-sm" class="label">Input: Size: Small</label>
+                                <input type="text" class="form-text form-text--sm" placeholder="Placeholder Text" id="demo-input-sm">
+                            </div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+                    <h4>Inputs: Group: Label</h4>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <div class="field">
+                                <div class="input-group">
+                                    <input type="text" class="input-group-text" placeholder="Input: Group: Label" id="demo-input-label-group">
+                                    <label for="demo-input-label-group" class="input-group-label font-size-xs">Label</label>
+                                </div>
+                            </div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+                    <h4>Inputs: States: Errors</h4>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <div class="field">
+                                <label for="demo-input-default-error" class="label">Input: Default</label>
+                                <input type="text" class="form-text form-error" placeholder="Placeholder Text" id="demo-input-default-error">
+                            </div>
+                            <div class="field">
+                                <div class="input-group form-error">
+                                    <input type="text" class="input-group-text" placeholder="Input: Group: Label" id="demo-input-label-group-error">
+                                    <label for="demo-input-label-group-error" class="input-group-label font-size-xs">Label</label>
+                                </div>
+                            </div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+                    <h4>Inputs: States: Disabled</h4>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <div class="field">
+                                <label for="demo-input-disabled" class="label">Input: Default: Disabled</label>
+                                <input type="text" class="form-text form-disabled" placeholder="Placeholder Text" id="demo-input-disabled" disabled>
+                            </div>
+                            <div class="field">
+                                <div class="input-group form-disabled">
+                                    <input type="text" class="input-group-text" placeholder="Input: Group: Label" id="demo-input-label-group-disabled" disabled>
+                                    <label for="demo-input-label-group-disabled" class="input-group-label font-size-xs">Label</label>
+                                </div>
+                            </div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+                    <h4>Inputs: States: Required</h4>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <div class="field">
+                                <label for="demo-input-required" class="label form-required">Input: Default: Required</label>
+                                <input type="text" class="form-text" placeholder="Placeholder Text" id="demo-input-required" required>
+                            </div>
+                            <div class="field">
+                                <div class="input-group">
+                                    <input type="text" class="input-group-text" placeholder="Input: Group: Label" id="demo-input-label-group-required" required>
+                                    <label for="demo-input-label-group-required" class="input-group-label font-size-xs form-required">Label</label>
+                                </div>
+                            </div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+                    <h3>Forms: File Input: Custom</h3>
+                    <div class="styleguide-section-files">Reference files: _forms.scss, _variables.scss, input-file-custom.js</div>
+                    <div class="styleguide-section-docs">
+                        <p>Ensure that the value of the input's <code class="styleguide-code-inline">ID</code> attribute matches that of the label's <code class="styleguide-code-inline">for</code> attribute.</p>
+                        <p>The file input uses the FileReader API to display an image thumbnail of the uploaded file.</p>
+                    </div>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <div class="field">
+                                <input type="file" accept="image/*" id="js-demo-input-file" class="input-file">
+                                <label for="js-demo-input-file" class="btn btn--brand-1 input-file-label">
+                                    <img src="assets/img/avatar/avatar-user.jpg" alt="" class="input-file-img" id="js-demo-input-file-image" width="44" height="44" role="img">Upload Photo
+                                </label>
+                            </div>
+                            <script>
+                                document.addEventListener("DOMContentLoaded", function() {
+                                    document.getElementById("js-demo-input-file").addEventListener("change", function() {
+                                        readURL(this, "js-demo-input-file-image");
+                                    });
+                                });
+                            </script>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+                    <h3>Forms: Textareas</h3>
+                    <div class="styleguide-section-docs">Textareas reuse many of the classes used by text inputs.</div>
+                    <h4>Textareas: Default</h4>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <div class="field">
+                                <label for="demo-textarea-default" class="label">Textarea: Default</label>
+                                <textarea class="form-text" id="demo-textarea-default" placeholder="Placeholder Text"></textarea>
+                            </div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+                    <h3>Forms: Selects</h3>
+                    <div class="styleguide-section-docs">
+                        <p>Selects reuse many of the classes of text inputs.</p>
+                    </div>
+                    <h4>Select: Default</h4>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <div class="field">
+                                <label for="demo-select" class="label">Label</label>
+                                <select class="form-text form-text--select" id="demo-select">
+                                    <option value="water-conservation">Water Conservation</option>
+                                    <option value="biodiversity-hotspot">Biodiversity Hotspot</option>
+                                    <option value="wildlife-zone">Wildlife Zone</option>
+                                </select>
+                            </div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+                    <h3>Forms: Inverse Styles</h3>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each brand-1-bg spacing">
+                            <div class="field">
+                                <label for="demo-input-inverse" class="label label--inverse">Label</label>
+                                <input type="text" class="form-text-inverse" placeholder="Placeholder Text" id="demo-input-inverse">
+                            </div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+                </div> <!-- /.styleguide-section-block -->
+            </section>
+
         </section>
 
     </div>
