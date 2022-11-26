@@ -127,3 +127,14 @@ $box-shadow: 0 toRem(4px) toRem(10px) rgba($black, 0.1);
 // VARIABLES: assets path
 
 $svg-path: '../svg';
+
+// VARIABLES: media queries breakpoints
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1400px
+);

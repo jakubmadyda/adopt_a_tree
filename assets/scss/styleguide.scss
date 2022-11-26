@@ -2,8 +2,9 @@
 // STYLE GUIDE
 @use 'sass:math';
 
-@import "partials/functions";
-@import "partials/variables";
+@import "./partials/functions";
+@import "./partials/variables";
+@import "./partials/mixins";
 
 // Variables: Style Guide: Sidebar
 $styleguide-sidebar-width: toRem(200px);
@@ -261,4 +262,35 @@ ul > li {
 
 ul {
     padding-left: 0;
+}
+
+.styleguide {
+    background: silver;
+}
+
+@media screen and (max-width: 700px) {
+    .styleguide {
+        background-color: gold;
+    }
+}
+
+@media screen and (min-height: 500px) {
+    .styleguide {
+        background-color: green;
+    }
+}
+
+.styleguide {
+    background: silver;
+    transition: all 3s;
+
+    @include mq(md) {
+        background-color: red;
+    }
+    @include mq(lg) {
+        background-color: gold;
+    }
+    @include mq(xxl) {
+        background-color: green;
+    }
 }
