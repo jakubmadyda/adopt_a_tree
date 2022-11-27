@@ -207,3 +207,15 @@
         margin-left: auto;
     }
 }
+
+// ---------------------------------------------
+// COMPONENTS: LOADING
+
+@keyframes rotate-animation {
+    from {transform: rotate(0)}
+    to {transform: rotate(360deg)}
+}
+
+.loader {
+    animation: rotate-animation 4s infinite linear;
+}
