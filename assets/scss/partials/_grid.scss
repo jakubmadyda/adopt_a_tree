@@ -1,0 +1,171 @@
+// ---------------------------------------------
+// GRID
+
+@use "sass:math";
+@import "variables";
+// ---------------------------------------------
+// GRID: CONTAINERS
+//  - Wrap a row in a container
+
+// Container: Mixin
+//  - All parameters have defaults
+//  - Parameters:
+//    - $max-width {number} : Maximum width
+//    - $grid-gutter {number} : Gutter or horizontal padding
+
+@mixin container($max-width: $media-lg, $grid-gutter: $grid-gutter) {
+    max-width: $max-width;
+
+    @if $max-width {
+        max-width: $max-width;
+    }
+
+    margin-inline: auto;
+    padding-inline: $spacing-2;
+}
+
+.container-lg {
+    @include container;
+}
+
+.container-mid {
+    @include container($media-md);
+}
+
+.container-sm {
+    @include container($media-sm);
+}
+
+.container-full {
+    @include container($max-width: false);
+}
+
+
+// ---------------------------------------------
+// GRID: ROWS
+//  - Used to wrap grid columns
+//  - Rows reset the 1st column's left and last column's right gutter
+//  - Must be wrapped in a container
+//  - All parameters have defaults
+//  - Parameters:
+//    - $grid-gutter {number}: Negative margins to offset horizontal padding
+
+@mixin row($grid-gutter: $grid-gutter) {
+    margin-inline: ( - $grid-gutter);
+}
+
+.row {
+    @include row;
+}
+
+.row-sm {
+    @include row($grid-gutter-sm);
+}
+
+.row-lg {
+    @include row($grid-gutter-lg);
+}
+
+// ---------------------------------------------
+// GRID: COLUMNS
+//  - Wrap in a row:
+//  - Columns create gutters
+//  - All parameters have defaults
+//  - Parameters:
+//    - $grid-gutter {number} : Gutter or horizontal padding
+
+@mixin col($grid-gutter: $grid-gutter) {
+    @if $grid-gutter {
+        padding-inline: $grid-gutter;
+    }
+}
+
+[class^="col"] {
+    box-sizing: border-box;
+}
+
+.col {
+    @include col;
+}
+
+.col-sm {
+    @include col($grid-gutter-sm);
+}
+
+.col-lg {
+    @include col($grid-gutter-lg);
+}
+
+@for $i from 1 through $grid-column-count {
+    .col-#{$i} {
+        width: $i * math.div(100%, $grid-column-count);
+    }
+}
+
+@media (min-width: $media-sm) {
+    @for $i from 1 through $grid-column-count {
+        .col-#{$i}-sm {
+            width: $i * math.div(100%, $grid-column-count);
+        }
+    }
+}
+
+
+@media (min-width: $media-md) {
+    @for $i from 1 through $grid-column-count {
+        .col-#{$i}-mid {
+            width: $i * math.div(100%, $grid-column-count);
+        }
+    }
+}
+
+@media (min-width: $media-lg) {
+    @for $i from 1 through $grid-column-count {
+        .col-#{$i}-lg {
+            width: $i * math.div(100%, $grid-column-count);
+        }
+    }
+}
+
+// ---------------------------------------------
+// GRID: FLOATS
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+
+// ---------------------------------------------
+// GRID: FLEXBOX
+
+.flex {
+    display: flex;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-justify-center {
+    justify-content: center;
+}
+
+.flex-align-center {
+    align-items: center;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.margin-left-auto {
+    margin-left: auto;
+}
+
+.margin-right-auto {
+    margin-right: auto;
+}
