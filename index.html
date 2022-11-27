@@ -1,20 +1,21 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Adopt a Tree</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/styleguide.css">
-    <script src="./assets/js/style-guide.js" async defer></script>
+    <meta charset="utf-8">
+    <title>Adopt-a-Tree: Styleguide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,600,600i,700,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/styleguide.css">
 </head>
+
 <body>
 <main class="main">
     <div class="styleguide">
@@ -1448,11 +1449,11 @@
 
                     <h3>Avatar: State: Empty</h3>
                     <div class="styleguide-demo-block">
-                        <div class="styleguide-demo-each brand-1-bg">
+                        <div class="styleguide-demo-each">
                             <div class="avatar text-center">
                                 <img src="assets/svg/avatar/avatar-user-empty-state.svg" alt="" width="144" height="144" class="avatar-img" role="img">
-                                <div class="avatar-username white">Jenn Davis</div>
-                                <div class="avatar-meta-info white">
+                                <div class="avatar-username">Jenn Davis</div>
+                                <div class="avatar-meta-info">
                                     <div class="spacing-b">4 Projects / 212 Trees</div>
                                     <div class="font-size-sm">Treehugger since Mar 10, 2017</div>
                                 </div>
@@ -1463,11 +1464,11 @@
 
                     <h3>Avatar: Image Uploaded</h3>
                     <div class="styleguide-demo-block">
-                        <div class="styleguide-demo-each brand-1-bg">
+                        <div class="styleguide-demo-each">
                             <div class="avatar text-center">
                                 <img src="assets/img/avatar/avatar-user.jpg" alt="Jenn Davis" width="144" height="144" class="avatar-img">
-                                <div class="avatar-username white">Jenn Davis</div>
-                                <div class="avatar-meta-info white">
+                                <div class="avatar-username">Jenn Davis</div>
+                                <div class="avatar-meta-info">
                                     <div class="spacing-b">4 Projects / 212 Trees</div>
                                     <div class="font-size-sm">Treehugger since Mar 10, 2017</div>
                                 </div>
@@ -1783,7 +1784,18 @@
                             </div>
 
                             <script>
-
+                                document.addEventListener("DOMContentLoaded", function() {
+                                    new Glider(document.querySelector("#js-glider-demo-1"), {
+                                        slidesToShow: 2.5,
+                                        slidesToScroll: 2,
+                                        draggable: true,
+                                        dots: "#js-dots-demo-1",
+                                        arrows: {
+                                            prev: "#js-glider-prev-demo-1",
+                                            next: "#js-glider-next-demo-1"
+                                        }
+                                    });
+                                });
                             </script>
                         </div> <!-- /.styleguide-demo-each -->
                         <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
@@ -1795,6 +1807,9 @@
         </section> <!-- /.styleguide-content -->
     </div> <!-- /.styleguide  -->
 </main>
-
+<script src="assets/js/style-guide.js"></script>
+<script src="assets/js/input-file-custom.js"></script>
+<script src="assets/js/libs/tabby.js"></script>
+<script src="assets/js/libs/glider.js"></script>
 </body>
 </html>

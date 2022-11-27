@@ -1,0 +1,42 @@
+@import "variables";
+// ---------------------------------------------
+// TABBY
+// Uses the Vanilla JS Tabs plugin (https://github.com/cferdinandi/tabby)
+// Only the plugin's Javascript has been used (and not the CSS)
+// Below is the custom CSS for the plugin
+
+.tab-block {
+    @include list-reset;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tab-each {
+    &:first-of-type {
+        .tab-each-anchor {
+            border-radius: $border-radius 0 0 $border-radius;
+        }
+    }
+
+    &:last-of-type {
+        .tab-each-anchor {
+            border-radius: 0 $border-radius $border-radius 0;
+        }
+    }
+}
+
+.tab-each-anchor {
+    color: $color-font;
+    background: $white;
+    box-shadow: $box-shadow;
+    font-weight: $font-bold;
+    text-align: center;
+    padding: ($spacing * 1.5);
+    display: flex;
+    align-items: center;
+
+    &[aria-selected="true"] {
+        color: $white;
+        background: $brand-2;
+    }
+}

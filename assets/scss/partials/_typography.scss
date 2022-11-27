@@ -169,3 +169,17 @@ a, .link {
 }
 
 
+// HTML Elements: Lists: Reset styling
+@mixin list-reset {
+    list-style-type: none;
+    margin-bottom: 0;
+    padding-left: 0;
+
+    li {
+        margin-bottom: 0;
+    }
+}
+
+.list-reset {
+    @include list-reset;
+}

@@ -1,0 +1,29 @@
+@import "variables";
+// ---------------------------------------------
+// GLIDER SLIDER PLUGIN: OVERRIDES
+// Uses the Glider Plugin: http://nickpiscitelli.github.io/Glider.js
+
+.glider-block {
+    position: relative;
+}
+
+.glider-track {
+    align-items: center;
+}
+
+.glider-prev, .glider-next {
+    font-size: 32px;
+    top: 36%;
+}
+
+.glider-dot {
+    background: $gray-titanium;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.glider-dot:hover,
+.glider-dot:focus,
+.glider-dot.active {
+    background: $brand-1-light;
+}
