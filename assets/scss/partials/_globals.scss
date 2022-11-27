@@ -1,3 +1,157 @@
-html, body {
-    font-size: 14px;
+@import "variables";
+
+// ---------------------------------------------
+// GLOBALS
+
+
+// ---------------------------------------------
+// GLOBALS: RESPONSIVE IMAGES, HTML5 VIDEOS, SVGS
+
+img, svg, video {
+    max-width: 100%;
+    height: auto;
+}
+
+// ---------------------------------------------
+// GLOBALS: FULL WIDTH
+// Use for images, HTML5 videos and any element which needs to fill up its parent's width
+
+.full-width {
+    width: 100%;
+    display: block;
+}
+
+// ---------------------------------------------
+// GLOBALS: PADDING: RESET
+// Resets padding on all sides
+
+.padding-reset {
+    padding: 0 !important;
+}
+
+// ---------------------------------------------
+// GLOBALS: MARGINS: RESET
+// Resets margins on all sides
+
+.margin-reset {
+    margin: 0 !important;
+}
+
+// ---------------------------------------------
+// GLOBALS: ALIGNMENT: CENTER: HORIZONTAL (USES AUTO MARGINS)
+// Use for horizontally centering elements
+// Adds a block display so auto margins also work on inline and inline-block elements
+
+.center-element {
+    display: block;
+    margin-inline: auto;
+}
+
+// ---------------------------------------------
+// GLOBALS: ALIGNMENT: INLINE & INLINE-BLOCK ELEMENTS
+// Helper classes for vertical alignment with inline-block elements
+
+.vertical-align-top {
+    vertical-align: top;
+    display: inline-block;
+}
+
+.vertical-align-middle {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.vertical-align-bottom {
+    vertical-align: bottom;
+    display: inline-block;
+}
+
+// ---------------------------------------------
+// GLOBALS: ALIGNMENT: VERTICAL AND ABSOLUTE CENTER
+// Uses absolute positioning to center
+// Ensure a parent with position: relative wraps the centered element
+
+.vertical-center {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+.position-relative {
+    position: relative;
+}
+
+// ---------------------------------------------
+// GLOBALS: BORDER RADIUS
+// Generates classes for border-radius on all sides
+// E.g., border-radius, border-radius-lg, border-radius-xl
+
+$border-radius-map: (
+        "border-radius": $border-radius,
+        "border-radius-lg": $border-radius-lg,
+        "border-radius-xl": $border-radius-xl,
+);
+
+@each $border, $border-value in $border-radius-map {
+    .#{$border} {
+        border-radius: $border-value;
+    }
+}
+
+// ---------------------------------------------
+// GLOBALS: ICONS
+
+.icon-size-lg {
+    font-size: $icon-size-lg;
+}
+
+.icon-size-xl {
+    font-size: $icon-size-xl;
+}
+
+.icon-size-xxl {
+    font-size: $icon-size-xxl;
+}
+
+// Icons: Spacing
+// Adds left and right spacing via mixins and classes.
+// Useful for icons in buttons, as bullet points in lists, etc.
+
+@mixin icon-left {
+    margin-right: $icon-spacing;
+}
+
+.icon-left {
+    @include icon-left;
+}
+
+@mixin icon-left-lg {
+    margin-right: $icon-spacing-lg;
+}
+
+.icon-left-lg {
+    @include icon-left-lg;
+}
+
+@mixin icon-right {
+    margin-left: $icon-spacing;
+}
+
+.icon-right {
+    @include icon-right;
+}
+
+@mixin icon-right-lg {
+    margin-left: $icon-spacing-lg;
+}
+
+.icon-right-lg {
+    @include icon-right-lg;
 }

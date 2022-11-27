@@ -16,7 +16,6 @@
     <script src="./assets/js/style-guide.js" async defer></script>
 </head>
 <body>
-
 <main class="main">
     <div class="styleguide">
         <nav class="styleguide-nav">
@@ -45,23 +44,104 @@
                 <li><a href="#styleguide-section-tabs">Tabs <span class="styleguide-link-label">JS</span></a></li>
                 <li><a href="#styleguide-section-sliders">Sliders &amp; Carousels <span class="styleguide-link-label">JS</span></a></li>
             </ul>
-        </nav>
-
+        </nav> <!-- /.styleguide-nav -->
         <section class="styleguide-content">
+            <img src="assets/svg/logos/logo.svg" width="36" height="36" alt="Logo: Adopt-a-Tree" class="styleguide-logo" role="img">
+            <h1 class="styleguide-heading">Style Guide</h1>
+
             <section id="styleguide-section-guidelines" class="styleguide-section">
                 <h2>Guidelines</h2>
+                <div class="styleguide-section-docs">
+                    <p>Adopt-a-Tree uses <a href="http://sass-lang.com" target="_blank">Sass</a> as a preprocessor for this project's CSS.</p> <p>Watch and compile the Sass files using the command line, or a GUI application like <a href="https://prepros.io" target="_blank">Prepros</a>, or a task runner like <a href="https://gulpjs.com" target="_blank">Gulp</a>, or a bundler like <a href="https://webpack.js.org" target="_blank">Webpack</a>.</p>
+                    <p>This project uses node-sass via the command line using the following command:</p>
+                    <div class="spacing-b">
+                        <pre><code class="styleguide-code-inline">node-sass --watch assets/scss/styles.scss assets/css/styles.css</code></pre>
+                    </div>
+                    <p><span class="styleguide-do">Do</span> use single-line Sass comments (which are the same as single-line JavaScript comments) for comments that other developers need to see, since they won't get compiled into the CSS stylesheet.</p>
+                    <p><span class="styleguide-dont">Don't</span> edit the <span class="font-bold">generated CSS</span> files.</p>
+                    <p><span class="styleguide-dont">Don't</span> use inline styles. The handful of inline styles in the style guide are purely for demo.</p>
+
+                    <p><span class="styleguide-do">Do </span> use <span class="font-bold">2 spaces</span> to indent your code.</p>
+                    <p><span class="styleguide-do">Do</span> follow hyphen-separated class naming. E.g. <code class="styleguide-code-inline">list-block</code>.</p>
+                    <p>Modifier classes use a double-hyphen naming convention. E.g.<code class="styleguide-code-inline">list-block--profile</code>.</p>
+                    <p><span class="styleguide-do">Do</span> create a separate class or ID for an element which requires JavaScript to modify its behavior. Prefix it with <code class="styleguide-code-inline">js-</code> and don't attach any styling to this class or ID.</p>
+                    <p><span class="styleguide-do">Do</span> browse through the <em>variables</em>, <em>globals</em>, <em>spacing</em> and <em>typography</em> partials. They contain plenty of reusable code.</p>
+                    <p><span class="styleguide-do">Do</span> use camelCase for naming variables and functions in JavaScript.</p>
+                    <p><span class="styleguide-do">Do</span> use semicolons after JavaScript statements.</p>
+                    <p><span class="styleguide-do">Do</span> strive for an accessible user interface for users of keyboards and screen readers.</p>
+                    <p><span class="styleguide-do">Do</span> ensure the project works on modern browers, including IE Edge, Chrome, Firefox, Safari, Android and iOS.</p>
+                </div>
+            </section>
+
+            <section id="styleguide-section-logo" class="styleguide-section">
+                <h2>Logo</h2>
+                <div class="styleguide-section-docs">
+                    <p>Adopt-a-Tree's logo is available in two colors, green and white, as two separate SVG files and a font icon with class <code class="styleguide-code-inline">at-icon-logo</code>. Usage of the SVG file in an image tag is preferred.</p>
+                    <p>A logo with a gradient circle is also available as an SVG file.</p>
+                    <p>All logos can be enlarged without incurring a loss in quality.</p>
+                </div>
+                <div class="styleguide-section-block">
+                    <h3>Logo: Default: SVG</h3>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <img src="assets/svg/logos/logo.svg" alt="Logo: Adopt-a-Tree" width="36" height="36" role="img">
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h3>Logo: Default: Icon Font</h3>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <div>
+                                <span class="at-icon-logo brand-1" aria-hidden="true"></span>
+                                <span class="show-on-screen-readers">Logo: Adopt-a-Tree</span>
+                            </div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h3>Logo: White Variant: SVG</h3>
+                    <div class="styleguide-section-docs">
+                        <p>A white variant of the logo can be optionally used to contrast dark backgrounds.</p>
+                    </div>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each black-bg">
+                            <img src="assets/svg/logos/logo-white.svg" alt="Logo: Adopt-a-Tree" width="36" height="36" role="img">
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h3>Logo: White Variant: Icon Font</h3>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each black-bg">
+                            <div>
+                                <span class="at-icon-logo white" aria-hidden="true"></span>
+                                <span class="show-on-screen-readers">Logo: Adopt-a-Tree</span>
+                            </div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h3>Logo: Gradient with Circle: SVG</h3>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <img src="assets/svg/logos/logo-gradient-green-circle.svg" alt="Logo: Adopt-a-Tree" width="144" height="144" role="img">
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                </div> <!-- /.styleguide-section-block -->
             </section>
 
             <section id="styleguide-section-colors" class="styleguide-section">
                 <h2>Colors</h2>
-                <div class="stylguide-section-docs">
+                <div class="styleguide-section-docs">
                     <p>Use variables or classes for colors.</p>
                     <p>Background colors have a <code class="styleguide-code-inline">-bg</code> suffix.</p>
                     <p>To incorporate a new color, add the color variable to the <em>variables</em> partial and refer to it in the Sass map inside the <em>colors</em> partial.</p>
                 </div>
-
                 <div class="styleguide-section-block">
-                    <div class="styleguide-section-files">Reference files: variables.scss</div>
+                    <div class="styleguide-section-files">Reference files: _colors.scss, _variables.scss</div>
 
                     <h3>Colors: Brand</h3>
                     <div class="styleguide-demo-block">
@@ -86,9 +166,9 @@
                                 <div class="brand-2-light">$brand-2-light</div>
                                 <div class="styleguide-box-demo brand-2-light-bg"></div>
                             </div>
-                        </div>
+                        </div> <!-- /.styleguide-demo-each -->
                         <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
-                    </div>
+                    </div> <!-- /.styleguide-demo-block -->
 
                     <h3>Colors: Warm</h3>
                     <div class="styleguide-demo-block">
@@ -196,7 +276,7 @@
                         <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
                     </div> <!-- /.styleguide-demo-block -->
 
-                </div>
+                </div> <!-- /.styleguide-section-block -->
             </section>
 
             <section id="styleguide-section-spacing" class="styleguide-section">
@@ -328,6 +408,445 @@
                 </div> <!-- /.styleguide-section-block -->
             </section>
 
+            <section id="styleguide-section-alignment" class="styleguide-section">
+                <h2>Alignment</h2>
+                <div class="styleguide-section-docs">
+                    <p>Alignment can occur via absolute positioning, auto margins, elements with inline-block displays and flexbox.</p>
+                    <p>The examples below use mixins and classes to position and center elements relative to each other and their parents.</p>
+                </div>
+                <div class="styleguide-section-block">
+                    <div class="styleguide-section-files">Reference files: _globals.scss, _grid.scss, _variables.scss</div>
+
+                    <h3>Alignment: Auto Margins: Centering: Horizontal</h3>
+                    <div class="styleguide-section-docs">
+                        <p>Use mixins or classes to center elements with margins.</p>
+                        <p>Auto margins are used for centering elements horizontally.</p>
+                        <p>Auto margins are also a useful centering mechanism for elements with fixed widths.</p>
+                    </div>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each styleguide-demo-each--margin-auto">
+                            <div class="center-element" style="width: 100px;">Horizontally Centered</div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h3>Alignment: Inline Block: Alignment</h3>
+                    <div class="styleguide-section-docs">
+                        <p>Use classes to position elements with an inline-block level display.</p>
+                    </div>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <div>
+                                <span class="at-icon-leaf vertical-align-top"></span>
+                                <span class="vertical-align-top">Vertical Align: Top</span>
+                            </div>
+
+                            <div>
+                                <span class="at-icon-leaf vertical-align-middle"></span>
+                                <span class="vertical-align-middle">Vertical Align: Middle</span>
+                            </div>
+
+                            <div>
+                                <span class="at-icon-leaf vertical-align-bottom"></span>
+                                <span class="vertical-align-bottom">Vertical Align: Bottom</span>
+                            </div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h3>Alignment: Flexbox</h3>
+                    <div class="styleguide-section-docs">
+                        <p>Use flexbox mixins or classes to center elements and push them to the right or left edge of their parents.</p>
+                        <p></p>
+                    </div>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <div class="flex flex-justify-center spacing-b">
+                                <div class="spacing gray-mist-bg">
+                                    Flexbox: Horizontal Centering
+                                </div>
+                                <div class="spacing white gray-titanium-bg">
+                                    Flexbox: Horizontal Centering
+                                </div>
+                            </div>
+
+                            <div class="flex flex-align-center spacing-b">
+                                <div class="spacing gray-mist-bg">
+                                    <p>Flexbox: Vertical Centering <br>
+                                        Notice how the two containers are vertically centered with flexbox. Flexbox makes horizontal and vertical centering easy as pie! It's the coolest thing since floats. And it allows elements to squeeze and stretch to fill up space as needed.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora cumque adipisci atque ab quam, non, maiores nostrum. Necessitatibus, sit quae magnam nesciunt totam culpa reiciendis amet molestiae libero natus iusto.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita soluta dolores nostrum, autem illum, aut a debitis tempore sunt enim quasi quos explicabo quae quaerat itaque cumque sit repellendus eaque.</p>
+                                </div>
+                                <div class="spacing white gray-titanium-bg">
+                                    Flexbox: Vertical Centering
+                                </div>
+                            </div>
+
+                            <div class="flex spacing-b">
+                                <div class="spacing gray-mist-bg">
+                                    Child of flex container
+                                </div>
+                                <div class="spacing white gray-titanium-bg margin-left-auto">
+                                    Flexbox: Push element to the right
+                                </div>
+                            </div>
+
+                            <div class="flex spacing-b">
+                                <div class="spacing gray-mist-bg margin-right-auto">
+                                    Flexbox: Push element to the left
+                                </div>
+                                <div class="spacing white gray-titanium-bg">
+                                    Child of flex container
+                                </div>
+                            </div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h3>Alignment: Positioning: Centering: Vertical & Absolute</h3>
+                    <div class="styleguide-section-docs">
+                        <p>Use mixins or classes to center elements with absolute positioning.</p>
+                        <p>A parent with relative positioning is required.</p>
+                        <p>Absolute positioning is used to center child elements.</p>
+                    </div>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <div class="position-relative brand-1-bg" style="height: 100px;">
+                                <div class="vertical-center white">Vertically Centered</div>
+                            </div>
+
+                            <div class="position-relative brand-2-bg" style="height: 100px;">
+                                <div class="absolute-center white">Absolutely Centered</div>
+                            </div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                </div> <!-- /.styleguide-section-block -->
+            </section>
+
+            <section id="styleguide-section-media" class="styleguide-section">
+                <h2>Media Queries</h2>
+                <div class="styleguide-section-docs">
+                    <p>The site primarily uses min-width media query variables since the layout is mobile-first. However, max-width media query variables are also available.</p>
+                    <p>Min-width media query variables: <code class="styleguide-code-inline">$media-sm</code>, <code
+                            class="styleguide-code-inline">$media-mid</code>, <code class="styleguide-code-inline">$media-lg</code>.</p>
+                    <p>Max-width media query variables: <code class="styleguide-code-inline">$media-sm-max</code>, <code class="styleguide-code-inline">$media-mid-max</code>, <code class="styleguide-code-inline">$media-lg-max</code>.</p>
+                    <p>Media queries are usually nested within the selector they are associated with.</p>
+                </div>
+                <div class="styleguide-section-block">
+                    <div class="styleguide-section-files">Reference files: _variables.scss</div>
+
+                    <div class="styleguide-section-docs">
+                        <p>Click the "Code" button to see a contrived example of all media queries on the site.</p>
+                    </div>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <style>
+                                .selector {
+                                    width: 100%;
+
+                                // Media Queries: Min Width
+                                @media (min-width: $media-sm) {
+                                    width: 60%;
+                                }
+
+                                @media (min-width: $media-mid) {
+                                    width: 50%;
+                                }
+
+                                @media (min-width: $media-lg) {
+                                    width: 40%;
+                                }
+
+                                // Media Queries: Max Width
+                                @media (max-width: $media-lg-max) {
+                                    width: 90%;
+                                }
+
+                                @media (max-width: $media-mid-max) {
+                                    width: 80%;
+                                }
+
+                                @media (max-width: $media-sm-max) {
+                                    width: 70%;
+                                }
+                                }
+                            </style>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                </div> <!-- /.styleguide-section-block -->
+            </section>
+
+            <section id="styleguide-section-grid" class="styleguide-section">
+                <h2>Grid</h2>
+                <div class="styleguide-section-docs">
+                    <p>To create a grid structure, start with a container, include a row and add columns. Use flex helpers with rows or float helpers with columns.</p>
+                    <p>A 12 column grid is provided with classes for each media query breakpoint. E.g. <code class="styleguide-code-inline">col-12</code>, <code class="styleguide-code-inline">col-6-sm</code>, <code class="styleguide-code-inline">col-4-mid</code> and <code class="styleguide-code-inline">col-3-lg</code>.</p>
+                    <p>To change the number of columns, change the value of the <code class="styleguide-code-inline">grid-column-count</code> variable in the <em>variables</em> partial. Doing so will automatically create new columns across all breakpoints. For example, you could change the numbers of columns from 6 to 12 or 24.</p>
+                </div>
+                <div class="styleguide-section-block">
+                    <div class="styleguide-section-files">Reference files: _grid.scss, _variables.scss</div>
+
+                    <h3>Grid: Containers</h3>
+                    <div class="styleguide-section-docs">
+                        <p>Container sizes are obtained from the media query variables.</p>
+                        <p>Each container is horizontally centered and has left and right padding.</p>
+                        <p>A full-width container also exists for sections that span the entire width of the screen.</p>
+                    </div>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each styleguide-demo-each--containers">
+                            <div class="container-lg">Container: Large: Most Common Size</div>
+                            <div class="container-mid">Container: Mid</div>
+                            <div class="container-sm">Container: Small</div>
+                            <div class="container-full">Container: Full Width</div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h3>Grid: Rows &amp; Columns: Default</h3>
+                    <div class="styleguide-section-docs">
+                        <p>Rows include clearfix functionality. A seperate clearfix mixin and class is available for use.</p>
+                        <p>Rows have negative margins to offset the left and right padding of the first and last columns respectively.</p>
+                        <p>Columns have a left and right padding that acts as gutters.</p>
+                        <p>Rows and columns have default, small and large gutters.</p>
+                    </div>
+
+                    <h4>Rows &amp; Columns: Default Gutters</h4>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <div class="row flex">
+                                <div class="col spacing-v">
+                                    <div class="spacing gray-mist-bg">Column 1</div>
+                                </div>
+                                <div class="col spacing-v">
+                                    <div class="spacing gray-mist-bg">Column 2</div>
+                                </div>
+                            </div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h4>Rows &amp; Columns: Small Gutters</h4>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <div class="row-sm flex">
+                                <div class="col-sm spacing-v">
+                                    <div class="spacing gray-mist-bg">Column 1</div>
+                                </div>
+                                <div class="col-sm spacing-v">
+                                    <div class="spacing gray-mist-bg">Column 2</div>
+                                </div>
+                            </div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h4>Rows &amp; Columns: Large Gutters</h4>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <div class="row-lg flex">
+                                <div class="col-lg spacing-b">
+                                    <div class="spacing gray-mist-bg">Column 1</div>
+                                </div>
+                                <div class="col-lg spacing-b">
+                                    <div class="spacing gray-mist-bg">Column 2</div>
+                                </div>
+                            </div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h4>Columns: Column 2 automatically fills up remaining width</h4>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <div class="row flex">
+                                <div class="col spacing-v">
+                                    <div class="spacing gray-mist-bg">Column 1</div>
+                                </div>
+                                <div class="col spacing-v flex-1">
+                                    <div class="spacing gray-mist-bg">Column 2</div>
+                                </div>
+                            </div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h4>Columns: Column 2 is pushed to the right</h4>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <div class="row flex">
+                                <div class="col spacing-v">
+                                    <div class="spacing gray-mist-bg">Column 1</div>
+                                </div>
+                                <div class="col spacing-v margin-left-auto">
+                                    <div class="spacing gray-mist-bg">Column 2</div>
+                                </div>
+                            </div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h4>Columns: Columns: Horizontally centered</h4>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <div class="row flex flex-justify-center">
+                                <div class="col spacing-v">
+                                    <div class="spacing gray-mist-bg">Column 1</div>
+                                </div>
+                                <div class="col spacing-v">
+                                    <div class="spacing gray-mist-bg">Column 2</div>
+                                </div>
+                            </div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h4>Columns: Vertically centered</h4>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <div class="row flex flex-align-center">
+                                <div class="col spacing-v">
+                                    <div class="spacing gray-mist-bg">Column 1</div>
+                                </div>
+                                <div class="col spacing-v">
+                                    <div class="spacing gray-mist-bg">
+                                        <p>Column 2: Flexbox: Vertical Centering <br>
+                                            Notice how the two containers are vertically centered with flexbox. Flexbox makes horizontal and vertical centering easy as pie! It's the coolest thing since floats. And it allows elements to squeeze and stretch to fill up space as needed.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora cumque adipisci atque ab quam, non, maiores nostrum. Necessitatibus, sit quae magnam nesciunt totam culpa reiciendis amet molestiae libero natus iusto.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita soluta dolores nostrum, autem illum, aut a debitis tempore sunt enim quasi quos explicabo quae quaerat itaque cumque sit repellendus eaque.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h4>Columns: Halves</h4>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <div class="row flex flex-wrap">
+                                <div class="col col-6 spacing-v">
+                                    <div class="spacing gray-mist-bg">Column 1</div>
+                                </div>
+                                <div class="col col-6 spacing-v">
+                                    <div class="spacing gray-mist-bg">Column 2</div>
+                                </div>
+                            </div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h4>Columns: Thirds</h4>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <div class="row flex flex-wrap">
+                                <div class="col col-4 spacing-v">
+                                    <div class="spacing gray-mist-bg">Column 1</div>
+                                </div>
+                                <div class="col col-4 spacing-v">
+                                    <div class="spacing gray-mist-bg">Column 2</div>
+                                </div>
+                                <div class="col col-4 spacing-v">
+                                    <div class="spacing gray-mist-bg">Column 3</div>
+                                </div>
+                            </div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h4>Columns: Different sizes on different breakpoints</h4>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <div class="row flex flex-wrap">
+                                <div class="col col-12 col-6-sm col-4-mid col-3-lg spacing-v">
+                                    <div class="spacing gray-mist-bg">Column 1</div>
+                                </div>
+                                <div class="col col-12 col-6-sm col-4-mid col-3-lg spacing-v">
+                                    <div class="spacing gray-mist-bg">Column 2</div>
+                                </div>
+                                <div class="col col-12 col-6-sm col-4-mid col-3-lg spacing-v">
+                                    <div class="spacing gray-mist-bg">Column 3</div>
+                                </div>
+                                <div class="col col-12 col-6-sm col-4-mid col-3-lg spacing-v">
+                                    <div class="spacing gray-mist-bg">Column 4</div>
+                                </div>
+                            </div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                </div> <!-- /.styleguide-section-block -->
+            </section>
+
+            <section id="styleguide-section-accessibility" class="styleguide-section">
+                <h2>Accessibility</h2>
+                <div class="styleguide-section-docs">
+                    <p>Use semantic HTML elements like header, nav, main, footer, section and appropriate headings.</p>
+                    <p>Use a class of <code class="styleguide-code-inline">show-on-screen-readers</code> to display content only for screen readers but hide it visually.</p>
+                    <p>Use the <code class="styleguide-code-inline">aria-hidden</code> attribute to hide content from screen readers but display it visually.</p>
+                    <p>Use the <code class="styleguide-code-inline">aria-label</code> attribute to give information to screen readers when labels can't be used.</p>
+                    <p>Add a descriptive value for the <code class="styleguide-code-inline">alt</code> attribute of images. Exceptions include descriptive images and those cases where information will be unnecessarily repeated.</p>
+                    <p>For SVGs referred to in image tags, add the attribute and value <code class="styleguide-code-inline">role="img"</code> to help screen readers interpret the element as an image. Note: This may cause the HTML5 validator to give you a warning.</p>
+                    <p>Ensure users are able to navigate the site via the keyboard.</p>
+                    <p>Ensure that every input has an <code class="styleguide-code-inline">ID</code> that matches the <code class="styleguide-code-inline">for</code> attribute of its label. Avoid using placeholders to replace labels. If you do use placeholders, make sure a label is provided for screen readers.</p>
+                </div>
+                <div class="styleguide-section-block">
+                    <div class="styleguide-section-files">Reference files: _globals.scss</div>
+
+                    <h3>Screen Readers: Informative images</h3>
+                    <div class="styleguide-section-docs">
+                        <p>Informative images should have meaningful alt text which can be used by screen readers.</p>
+                    </div>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <img src="assets/svg/logos/logo.svg" width="44" height="44" alt="Logo: Adopt-a-Tree" role="img">
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h3>Screen Readers: Decorative images</h3>
+                    <div class="styleguide-section-docs">
+                        <p>Images with empty alt text are ignored by screen readers.</p>
+                    </div>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <img src="assets/svg/leaf-motif.svg" alt="" width="80" class="center-element" role="img">
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h3>Screen Readers: Informative font icons</h3>
+                    <div class="styleguide-section-docs">
+                        <p>This example uses the <code class="styleguide-code-inline">aria-hidden</code> attribute and <code class="styleguide-code-inline">show-on-screen-readers</code> class to make an "X" icon button accessible.</p>
+                    </div>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <button class="btn-reset">
+                                <span class="at-icon-x icon-size-xxl" aria-hidden="true"></span>
+                                <span class="show-on-screen-readers">Close Lightbox</span>
+                            </button>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h3>Screen Readers: Decorative font icons</h3>
+                    <div class="styleguide-section-docs">
+                        <p>This example hides font icons, which are purely decorative, from screen readers using the <code class="styleguide-code-inline">aria-hidden</code> attribute.</p>
+                    </div>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <span class="at-icon-leaf" aria-hidden="true"></span>
+                            <span>The icon on the left is purely decorative.</span>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                </div> <!-- /.styleguide-section-block -->
+            </section> <!-- /.styleguide-section -->
+
             <section id="styleguide-section-typography" class="styleguide-section">
                 <h2>Typography</h2>
                 <div class="styleguide-section-docs">
@@ -455,6 +974,43 @@
                                 <li>List: Reset Styles: Item 2</li>
                                 <li>List: Reset Styles: Item 3</li>
                             </ul>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                </div> <!-- /.styleguide-section-block -->
+            </section>
+
+            <section id="styleguide-section-images" class="styleguide-section">
+                <h2>Images</h2>
+                <div class="styleguide-section-docs">
+                    <p>Images are responsive by default.</p>
+                </div>
+                <div class="styleguide-section-block">
+                    <div class="styleguide-section-files">Reference files: _globals.scss</div>
+
+                    <h3>Images: Responsive</h3>
+                    <div class="styleguide-section-docs">
+                        <p>By default, images resize according to the size of the screen and don't exceed the width of the parent's container.</p>
+                    </div>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <div style="width: 250px;">
+                                <img src="assets/img/art-heart-600px.jpg" width="600" height="369"
+                                     alt="Responsive Image: Example">
+                            </div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h3>Images: Full Width</h3>
+                    <div class="styleguide-section-docs">
+                        <p>Add a class of <code class="styleguide-code-inline">full-width</code> to stretch an image to the full width of its parent container.</p>
+                        <p>This will scale the image beyond its natural dimensions, which is not desirable in all circumstances due to degraded image quality.</p>
+                    </div>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <img src="assets/img/art-heart-600px.jpg" width="600" height="369" alt="Responsive Image: Full Width: Example" class="full-width">
                         </div> <!-- /.styleguide-demo-each -->
                         <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
                     </div> <!-- /.styleguide-demo-block -->
@@ -639,18 +1195,6 @@
                         <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
                     </div> <!-- /.styleguide-demo-block -->
 
-                    <h3>Buttons: Hollow: Brand 2</h3>
-                    <div class="styleguide-demo-block">
-                        <div class="styleguide-demo-each styleguide-demo-each--buttons">
-                            <button class="btn btn-hollow--brand-2" type="submit">Button</button>
-                            <a href="#" class="btn btn-hollow--brand-2 btn--sm">Button: Small</a>
-                            <div class="btn btn-hollow--brand-2 btn--xs" tabindex="0" role="button">Button: Extra Small</div>
-                            <span class="btn btn-hollow--brand-2 full-width" tabindex="0" role="button">Button: Full Width</span>
-                            <input type="submit" class="btn btn-hollow--brand-2 btn--disabled" value="Button: Hollow: Disabled" disabled>
-                        </div> <!-- /.styleguide-demo-each -->
-                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
-                    </div> <!-- /.styleguide-demo-block -->
-
                     <h3>Buttons: Hollow: White</h3>
                     <div class="styleguide-demo-block">
                         <div class="styleguide-demo-each styleguide-demo-each--buttons gray-lead-bg">
@@ -685,6 +1229,7 @@
                 </div>
                 <div class="styleguide-section-block">
                     <div class="styleguide-section-files">Reference files: _forms.scss, _variables.scss</div>
+
                     <h3>Forms: Labels</h3>
                     <div class="styleguide-section-docs">
                         <p>For demo purposes, the labels below have no <code class="styleguide-code-inline">for</code> attribute, since no input is associated with them.</p>
@@ -697,6 +1242,7 @@
                         </div> <!-- /.styleguide-demo-each -->
                         <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
                     </div> <!-- /.styleguide-demo-block -->
+
                     <h3>Forms: Inputs</h3>
                     <h4>Inputs: Default</h4>
                     <div class="styleguide-demo-block">
@@ -708,6 +1254,7 @@
                         </div> <!-- /.styleguide-demo-each -->
                         <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
                     </div> <!-- /.styleguide-demo-block -->
+
                     <h4>Inputs: Sizes</h4>
                     <div class="styleguide-demo-block">
                         <div class="styleguide-demo-each">
@@ -718,6 +1265,7 @@
                         </div> <!-- /.styleguide-demo-each -->
                         <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
                     </div> <!-- /.styleguide-demo-block -->
+
                     <h4>Inputs: Group: Label</h4>
                     <div class="styleguide-demo-block">
                         <div class="styleguide-demo-each">
@@ -730,6 +1278,7 @@
                         </div> <!-- /.styleguide-demo-each -->
                         <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
                     </div> <!-- /.styleguide-demo-block -->
+
                     <h4>Inputs: States: Errors</h4>
                     <div class="styleguide-demo-block">
                         <div class="styleguide-demo-each">
@@ -737,6 +1286,7 @@
                                 <label for="demo-input-default-error" class="label">Input: Default</label>
                                 <input type="text" class="form-text form-error" placeholder="Placeholder Text" id="demo-input-default-error">
                             </div>
+
                             <div class="field">
                                 <div class="input-group form-error">
                                     <input type="text" class="input-group-text" placeholder="Input: Group: Label" id="demo-input-label-group-error">
@@ -746,6 +1296,7 @@
                         </div> <!-- /.styleguide-demo-each -->
                         <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
                     </div> <!-- /.styleguide-demo-block -->
+
                     <h4>Inputs: States: Disabled</h4>
                     <div class="styleguide-demo-block">
                         <div class="styleguide-demo-each">
@@ -753,6 +1304,7 @@
                                 <label for="demo-input-disabled" class="label">Input: Default: Disabled</label>
                                 <input type="text" class="form-text form-disabled" placeholder="Placeholder Text" id="demo-input-disabled" disabled>
                             </div>
+
                             <div class="field">
                                 <div class="input-group form-disabled">
                                     <input type="text" class="input-group-text" placeholder="Input: Group: Label" id="demo-input-label-group-disabled" disabled>
@@ -762,6 +1314,7 @@
                         </div> <!-- /.styleguide-demo-each -->
                         <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
                     </div> <!-- /.styleguide-demo-block -->
+
                     <h4>Inputs: States: Required</h4>
                     <div class="styleguide-demo-block">
                         <div class="styleguide-demo-each">
@@ -769,6 +1322,7 @@
                                 <label for="demo-input-required" class="label form-required">Input: Default: Required</label>
                                 <input type="text" class="form-text" placeholder="Placeholder Text" id="demo-input-required" required>
                             </div>
+
                             <div class="field">
                                 <div class="input-group">
                                     <input type="text" class="input-group-text" placeholder="Input: Group: Label" id="demo-input-label-group-required" required>
@@ -778,6 +1332,7 @@
                         </div> <!-- /.styleguide-demo-each -->
                         <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
                     </div> <!-- /.styleguide-demo-block -->
+
                     <h3>Forms: File Input: Custom</h3>
                     <div class="styleguide-section-files">Reference files: _forms.scss, _variables.scss, input-file-custom.js</div>
                     <div class="styleguide-section-docs">
@@ -792,6 +1347,7 @@
                                     <img src="assets/img/avatar/avatar-user.jpg" alt="" class="input-file-img" id="js-demo-input-file-image" width="44" height="44" role="img">Upload Photo
                                 </label>
                             </div>
+
                             <script>
                                 document.addEventListener("DOMContentLoaded", function() {
                                     document.getElementById("js-demo-input-file").addEventListener("change", function() {
@@ -802,6 +1358,7 @@
                         </div> <!-- /.styleguide-demo-each -->
                         <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
                     </div> <!-- /.styleguide-demo-block -->
+
                     <h3>Forms: Textareas</h3>
                     <div class="styleguide-section-docs">Textareas reuse many of the classes used by text inputs.</div>
                     <h4>Textareas: Default</h4>
@@ -814,10 +1371,12 @@
                         </div> <!-- /.styleguide-demo-each -->
                         <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
                     </div> <!-- /.styleguide-demo-block -->
+
                     <h3>Forms: Selects</h3>
                     <div class="styleguide-section-docs">
                         <p>Selects reuse many of the classes of text inputs.</p>
                     </div>
+
                     <h4>Select: Default</h4>
                     <div class="styleguide-demo-block">
                         <div class="styleguide-demo-each">
@@ -832,6 +1391,7 @@
                         </div> <!-- /.styleguide-demo-each -->
                         <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
                     </div> <!-- /.styleguide-demo-block -->
+
                     <h3>Forms: Inverse Styles</h3>
                     <div class="styleguide-demo-block">
                         <div class="styleguide-demo-each brand-1-bg spacing">
@@ -842,12 +1402,398 @@
                         </div> <!-- /.styleguide-demo-each -->
                         <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
                     </div> <!-- /.styleguide-demo-block -->
+
                 </div> <!-- /.styleguide-section-block -->
             </section>
 
-        </section>
+            <section id="styleguide-section-content-blocks" class="styleguide-section">
+                <h2>Content Blocks</h2>
+                <div class="styleguide-section-docs">
+                    <p>A content block has a white background, rounded corners, a box shadow and a standard value for padding on all sides.</p>
+                    <p>Content blocks are used throughout the site, including cart items and list views.</p>
+                </div>
+                <div class="styleguide-section-block">
+                    <div class="styleguide-section-files">Reference files: _components.scss, _variables.scss</div>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <div class="content-block">
+                                <p>The content block component is widely used across the site.</p>
+                            </div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
 
-    </div>
+                </div> <!-- /.styleguide-section-block -->
+            </section>
+            <section id="styleguide-section-progress-bars" class="styleguide-section">
+                <h2>Progress Bars</h2>
+                <div class="styleguide-section-block">
+                    <div class="styleguide-section-files">Reference files: _components.scss, _variables.scss</div>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <div class="progress-bar">
+                                <div class="progress-bar-value" style="width: 25%;"></div>
+                            </div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                </div> <!-- /.styleguide-section-block -->
+            </section>
+
+            <section id="styleguide-section-avatars" class="styleguide-section">
+                <h2>Avatars</h2>
+                <div class="styleguide-section-block">
+                    <div class="styleguide-section-files">Reference files: _components.scss, _variables.scss</div>
+
+                    <h3>Avatar: State: Empty</h3>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each brand-1-bg">
+                            <div class="avatar text-center">
+                                <img src="assets/svg/avatar/avatar-user-empty-state.svg" alt="" width="144" height="144" class="avatar-img" role="img">
+                                <div class="avatar-username white">Jenn Davis</div>
+                                <div class="avatar-meta-info white">
+                                    <div class="spacing-b">4 Projects / 212 Trees</div>
+                                    <div class="font-size-sm">Treehugger since Mar 10, 2017</div>
+                                </div>
+                            </div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h3>Avatar: Image Uploaded</h3>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each brand-1-bg">
+                            <div class="avatar text-center">
+                                <img src="assets/img/avatar/avatar-user.jpg" alt="Jenn Davis" width="144" height="144" class="avatar-img">
+                                <div class="avatar-username white">Jenn Davis</div>
+                                <div class="avatar-meta-info white">
+                                    <div class="spacing-b">4 Projects / 212 Trees</div>
+                                    <div class="font-size-sm">Treehugger since Mar 10, 2017</div>
+                                </div>
+                            </div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                </div> <!-- /.styleguide-section-block -->
+            </section>
+
+            <section id="styleguide-section-banners" class="styleguide-section">
+                <h2>Banners</h2>
+                <div class="styleguide-section-docs">
+                    <p>Banners are full-width sections with background images, overlays and text.</p>
+                    <p>The demo example adds the background image as an inline style. Please create a new modifier class for each banner in the project and add the background image to it.</p>
+                </div>
+                <div class="styleguide-section-block">
+                    <div class="styleguide-section-files">Reference files: _components.scss, _variables.scss</div>
+
+                    <h3>Banners: Heading</h3>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <div class="banner" style="background-image: url('assets/img/fern-hands.jpg')">
+                                <div class="overlay"></div>
+                                <div class="banner-content text-center">
+                                    <h1 class="white font-bold">Greening of Abandoned Copper Mine</h1>
+                                </div>
+                            </div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h3>Banners: Heading, Subheading</h3>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <div class="banner" style="background-image: url('assets/img/art-heart.jpg')">
+                                <div class="overlay"></div>
+                                <div class="banner-content text-center">
+                                    <img src="assets/svg/logos/logo-white.svg" width="44" height="44" alt="Logo: Adopt-a-Tree" role="img">
+                                    <div>
+                                        <h1 class="banner-heading">Adopt-a-Tree</h1>
+                                        <div class="banner-subheading">Crowd Sourcing for Trees</div>
+                                    </div>
+                                    <div class="font-bold">An Initiative by Carved Rock Fitness</div>
+                                </div>
+                            </div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                </div> <!-- /.styleguide-section-block -->
+            </section>
+
+            <section id="styleguide-section-lists" class="styleguide-section">
+                <h2>Lists: Styled</h2>
+                <div class="styleguide-section-docs">
+                    <p>Lists can be styled in a variety of ways using helper classes.</p>
+                </div>
+                <div class="styleguide-section-block">
+                    <div class="styleguide-section-files">Reference files: _components.scss, _typography.scss, _variables.scss</div>
+
+                    <h3>Lists: Styled: Icons</h3>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <ul class="list-reset font-bold">
+                                <li class="spacing-b">
+                                    <span class="at-icon-leaf brand-1-light icon-left-lg icon-size-xxl vertical-align-bottom" aria-hidden="true"></span>
+                                    <span class="font-size-lg">List: Item 1</span>
+                                </li>
+                                <li class="spacing-b">
+                                    <span class="at-icon-atom brand-2 icon-left-lg icon-size-xxl vertical-align-bottom" aria-hidden="true"></span>
+                                    <span class="font-size-lg">List: Item 2</span>
+                                </li>
+                                <li class="spacing-b">
+                                    <span class="at-icon-restaurant red-crimson icon-left-lg icon-size-xxl vertical-align-bottom" aria-hidden="true"></span>
+                                    <span class="font-size-lg">List: Item 3</span>
+                                </li>
+                                <li class="spacing-b">
+                                    <span class="at-icon-droplet blue-aqua icon-left-lg icon-size-xxl vertical-align-bottom" aria-hidden="true"></span>
+                                    <span class="font-size-lg">List: Item 4</span>
+                                </li>
+                            </ul>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h3>Lists: Styled: Block</h3>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <ul class="list-block list-reset">
+                                <li class="list-each">
+                                    <div class="content-block">
+                                        <div class="row flex">
+                                            <div class="col gray-coal">
+                                                <div class="at-icon-dollar icon-size-xxl" aria-hidden="true"></div>
+                                                <div class="show-on-screen-readers">Price in dollars:</div>
+                                                <div class="font-bold">10</div>
+                                            </div>
+                                            <div class="col flex-1 text-center">
+                                                <div class="brand-1-light font-size-lg font-bold">
+                                                    Greening of Abandoned Copper Mine
+                                                </div>
+                                                <div class="font-semi-bold">Burundi, Africa</div>
+                                                <div class="gray-cement font-size-sm spacing-2-b">07/20/2019</div>
+                                            </div>
+                                            <div class="col brand-1-light">
+                                                <div class="at-icon-leaf icon-size-xxl" aria-hidden="true"></div>
+                                                <div class="show-on-screen-readers">Number of trees:</div>
+                                                <div class="font-bold">10</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <a href="#" class="btn btn--brand-1 btn--xs btn--list-each">Donate Again</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                </div> <!-- /.styleguide-section-block -->
+            </section>
+
+            <section id="styleguide-section-cards" class="styleguide-section">
+                <h2>Cards</h2>
+                <div class="styleguide-section-docs">
+                    <p>Cards are used to provide snapshots and summaries of content.</p>
+                    <p>They can be modified with banner images, icons, progress bars and more.</p>
+                </div>
+                <div class="styleguide-section-block">
+                    <div class="styleguide-section-files">Reference files: _components.scss, _.variables.scss</div>
+
+                    <h3>Card with Banner Image and Progress Bar</h3>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <div class="card">
+                                <div class="card-banner">
+                                    <div class="overlay overlay--card-banner"></div>
+                                    <img src="assets/img/borneo-tree-planting-600px.jpg" alt="Tree Planting at Borneo" width="600" height="450" class="card-banner-img">
+                                    <div class="card-banner-content">
+                                        <div class="row-sm flex">
+                                            <div class="col-sm card-location">
+                                                <span class="at-icon-map icon-left" aria-hidden="true"></span>
+                                                <span class="show-on-screen-readers">Location:</span>
+                                                <span class="font-size-sm font-bold">Borneo, Indonesia</span>
+                                            </div>
+                                            <div class="col-sm card-tree-cost">
+                                                <span class="at-icon-dollar font-size-sm" aria-hidden="true"></span>
+                                                <span class="font-size-sm font-bold">1</span>
+                                                <span class="show-on-screen-readers">Price in dollars:</span>
+                                                <span class="at-icon-leaf icon-right" aria-hidden="true"></span>
+                                            </div>
+                                        </div>
+                                        <div class="card-banner-title">Afforestation near Coastal Forest</div>
+                                        <div class="card-banner-icons">
+                                            <span class="at-icon-droplet card-banner-icon" title="Water Conservation" aria-hidden="true"></span>
+                                            <span class="show-on-screen-readers">Water Conservation</span>
+                                            <span class="at-icon-paw card-banner-icon" title="Wildlife Zone" aria-hidden="true"></span>
+                                            <span class="show-on-screen-readers">Wildlife Zone</span>
+                                            <span class="at-icon-atom card-banner-icon" title="Carbon Sink" aria-hidden="true"></span>
+                                            <span class="show-on-screen-readers">Carbon Sink</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <div class="progress-bar">
+                                        <div class="progress-bar-value" style="width: 4%;"></div>
+                                    </div>
+                                    <div class="row-sm flex card-progress-text">
+                                        <div class="col-sm">4%</div>
+                                        <div class="col-sm card-progress-target">
+                                            <span class="show-on-screen-readers">Target:</span>
+                                            <span>75000</span>
+                                            <span class="at-icon-target brand-1 icon-size-xl" aria-hidden="true"></span>
+                                        </div>
+                                    </div>
+                                    <div class="text-center spacing-2-t">
+                                        <a href="#" class="link-action">
+                                            <span class="at-icon-arrow-right link-action-icon"></span>
+                                            <span class="link-action-text font-size-sm">Read More</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                </div> <!-- /.styleguide-section-block -->
+            </section>
+
+            <section id="styleguide-section-loading" class="styleguide-section">
+                <h2>Loading</h2>
+                <div class="styleguide-section-docs">
+                    <p>An icon font with a CSS animation is used to show loading behavior.</p>
+                </div>
+                <div class="styleguide-section-block">
+                    <div class="styleguide-section-files">Reference files: _components.scss, _.variables.scss</div>
+
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <div class="text-center spacing-2-v">
+                                <div class="at-icon-loader icon-size-xxl loader"></div>
+                            </div>
+
+                            <button class="btn btn--brand-2">Button with Loading
+                                <span class="at-icon-loader icon-right loader"></span>
+                            </button>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                </div> <!-- /.styleguide-section-block -->
+            </section>
+
+            <section id="styleguide-section-tabs" class="styleguide-section">
+                <h2>Tabs</h2>
+                <div class="styleguide-section-docs">
+                    <p>Tabs use the <a href="https://github.com/cferdinandi/tabby" target="_blank">Tabby plugin</a>.</p>
+                    <p>Multiple instances can be created by changing the value of the data attribute on the list element.</p>
+                    <p>For older browser support, the <em>tabby.polyfills.js</em> file or its minified version can be downloaded from the git repository and added to the list of scripts.</p>
+                </div>
+                <div class="styleguide-section-block">
+                    <div class="styleguide-section-files">Reference files: _tabby.scss, _variables.scss, tabby.js</div>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <ul class="tab-block" data-tabs>
+                                <li class="tab-each">
+                                    <a href="#tab-projects" class="tab-each-anchor" data-tabby-default>
+                                        <span class="at-icon-leaf icon-left-lg" aria-hidden="true"></span>
+                                        <span>Projects</span>
+                                    </a>
+                                </li>
+                                <li class="tab-each">
+                                    <a href="#tab-payment" class="tab-each-anchor">
+                                        <span class="at-icon-card icon-left-lg" aria-hidden="true"></span>
+                                        <span>Payment</span>
+                                    </a>
+                                </li>
+                                <li class="tab-each">
+                                    <a href="#tab-profile" class="tab-each-anchor">
+                                        <span class="at-icon-user icon-left-lg" aria-hidden="true"></span>
+                                        <span>Profile</span>
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <div id="tab-projects" class="spacing-v">
+                                Content: Projects
+                            </div>
+                            <div id="tab-payment" class="spacing-v">
+                                Content: Payment
+                            </div>
+                            <div id="tab-profile" class="spacing-v">
+                                Content: Profile
+                            </div>
+
+                            <script>
+                                document.addEventListener("DOMContentLoaded", function() {
+                                    var tabs = new Tabby('[data-tabs]');
+                                });
+                            </script>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                </div> <!-- /.styleguide-section-block -->
+            </section>
+
+            <section id="styleguide-section-sliders" class="styleguide-section">
+                <h2>Sliders &amp; Carousels</h2>
+                <div class="styleguide-section-docs">
+                    <p>Sliders and carousels use the <a href="https://github.com/NickPiscitelli/Glider.js" target="_blank">Glider plugin</a>.</p>
+                    <p>The documentation and demo for the plugin are available <a href="https://nickpiscitelli.github.io/Glider.js/" target="_blank">here</a>.</p>
+                    <p>The plugin has several features including swipe on touch devices, responsive breakpoints and fractional slides.</p>
+                </div>
+                <div class="styleguide-section-block">
+                    <div class="styleguide-section-files">Reference files: _glider.scss, _glider-overrides.scss, _variables.scss, glider.js</div>
+
+                    <h3>Carousels</h3>
+                    <div class="styleguide-section-docs">
+                        <p>Ensure that you use unique classes or (preferably) IDs for the next, previous buttons, dots and the slider. This is to ensure that multiple glider instances work on the same page.</p>
+                    </div>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each">
+                            <div class="glider-block">
+                                <div id="js-glider-demo-1" class="row">
+                                    <div class="col">
+                                        <img src="assets/img/holding-leaf-600px.jpg" alt="Leaf with blurry background" class="border-radius">
+                                    </div>
+                                    <div class="col">
+                                        <img src="assets/img/sapling-set-600px.jpg" alt="Collection of seedlings" class="border-radius">
+                                    </div>
+                                    <div class="col">
+                                        <img src="assets/img/fern-hands-600px.jpg" alt="Fern grove" class="border-radius">
+                                    </div>
+                                    <div class="col">
+                                        <img src="assets/img/borneo-tree-planting-600px.jpg" alt="Afforestation" class="border-radius">
+                                    </div>
+                                    <div class="col">
+                                        <img src="assets/img/art-heart-600px.jpg" alt="Tree planting" class="border-radius">
+                                    </div>
+                                </div>
+                                <button aria-label="Previous" class="glider-prev" id="js-glider-prev-demo-1">
+                                    <span class="at-icon-chevron-left"></span>
+                                </button>
+                                <button aria-label="Next" class="glider-next" id="js-glider-next-demo-1">
+                                    <span class="at-icon-chevron-right"></span>
+                                </button>
+                                <div class="dots" id="js-dots-demo-1"></div>
+                            </div>
+
+                            <script>
+
+                            </script>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code js-btn-styleguide-code btn btn--brand-1 btn--sm">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                </div> <!-- /.styleguide-section-block -->
+            </section>
+
+        </section> <!-- /.styleguide-content -->
+    </div> <!-- /.styleguide  -->
 </main>
 
 </body>
