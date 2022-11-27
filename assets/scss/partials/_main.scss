@@ -1,0 +1,28 @@
+@import "variables";
+
+// ---------------------------------------------
+// MAIN: STYLES
+
+
+// ---------------------------------------------
+// BOX SIZING
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+// ---------------------------------------------
+// HTML, BODY: STYLES
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    color: $color-font;
+    background-color: $gray-mist;
+    font-size: $font-size;
+    font-weight: $font-regular;
+    font-family: $font-family-1;
+    line-height: $line-height;
+}
