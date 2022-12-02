@@ -15,14 +15,15 @@
 
 // Sass Map to store font-sizes
 $font-sizes-map: (
-    "font-size": $font-size,
-    "font-size-sm": $font-size-sm,
-    "font-size-lg": $font-size-lg
+        "font-size": $font-size,
+        "font-size-xs": $font-size-xs,
+        "font-size-sm": $font-size-sm,
+        "font-size-lg": $font-size-lg
 );
 
 // @each Sass loop to generate classes
 @each $name, $value in $font-sizes-map {
-    .#{name} {
+    .#{$name} {
         font-size: $value;
     }
 }
@@ -33,13 +34,13 @@ $font-sizes-map: (
 
 // Sass Map to store font-weights
 $font-weights-map: (
-    "font-regular": $font-regular,
-    "font-semi-bold": $font-semi-bold,
-    "font-bold": $font-bold
+        "font-regular": $font-regular,
+        "font-semi-bold": $font-semi-bold,
+        "font-bold": $font-bold
 );
 
 // @each Sass loop to generate classes
-@each $name, $value in  $font-weights-map {
+@each $name, $value in $font-weights-map {
     .#{$name} {
         font-weight: $value;
     }
@@ -89,17 +90,17 @@ em, i {
 // HTML Elements: Headings
 
 $heading-sizes-map: (
-    "h1": $h1,
-    "h2": $h2,
-    "h3": $h3,
-    "h4": $h4,
-    "h5": $h5,
-    "h6": $h6
+        "h1": $h1,
+        "h2": $h2,
+        "h3": $h3,
+        "h4": $h4,
+        "h5": $h5,
+        "h6": $h6
 );
 
 // @each Sass loop to generate styles for HTML Headings h1 - h6
 @each $name, $value in $heading-sizes-map {
-    #{$name}{
+    #{$name} {
         font-size: $value;
         color: $gray-coal;
         font-weight: $font-semi-bold;
