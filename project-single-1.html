@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Adopt a Tree</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="assets/js/libs/glider.js"></script>
 </head>
 <body>
 
@@ -53,10 +54,47 @@
                     </a>
                 </div>
             </div>
-            <div class="gray-mist-bg spacing-3-v">
+            <div class="gray-mist-bg spacing-3-t spacing-2-l">
+                <div class="glider-block">
+                    <div id="js-glider-demo-1" class="row">
+                        <div class="col">
+                            <img src="assets/img/holding-leaf-600px.jpg" alt="Leaf with blurry background" class="border-radius">
+                        </div>
+                        <div class="col">
+                            <img src="assets/img/sapling-set-600px.jpg" alt="Collection of seedlings" class="border-radius">
+                        </div>
+                        <div class="col">
+                            <img src="assets/img/fern-hands-600px.jpg" alt="Fern grove" class="border-radius">
+                        </div>
+                        <div class="col">
+                            <img src="assets/img/borneo-tree-planting-600px.jpg" alt="Afforestation" class="border-radius">
+                        </div>
+                        <div class="col">
+                            <img src="assets/img/art-heart-600px.jpg" alt="Tree planting" class="border-radius">
+                        </div>
+                    </div>
+                    <button aria-label="Previous" class="glider-prev" id="js-glider-prev-demo-1">
+                    </button>
+                    <button aria-label="Next" class="glider-next" id="js-glider-next-demo-1">
+                    </button>
+                </div>
 
+                <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        new Glider(document.querySelector("#js-glider-demo-1"), {
+                            slidesToShow: 2.5,
+                            slidesToScroll: 2,
+                            draggable: true,
+                            dots: "#js-dots-demo-1",
+                            arrows: {
+                                prev: "#js-glider-prev-demo-1",
+                                next: "#js-glider-next-demo-1"
+                            }
+                        });
+                    });
+                </script>
             </div>
-            <div class="gray-mist-bg spacing-3-v spacing-2-h">
+            <div class="gray-mist-bg spacing-2-v spacing-2-h">
                 <h3 class="text-center black margin-reset spacing-b">Plant a Forest</h3>
                 <div class="row flex flex-wrap">
                     <div class="col col-6 spacing-v">
