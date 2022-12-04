@@ -8,6 +8,7 @@
     <title>Adopt a Tree</title>
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="assets/js/libs/tabby.js"></script>
+    <script src="assets/js/input-file-custom.js"></script>
 </head>
 <body>
 
@@ -15,9 +16,9 @@
     <div class="row">
         <div class="col">
             <div class="brand-1-bg spacing-2">
-                <img src="assets/svg/logos/logo-white.svg" alt="Logo: Adopt-a-Tree" width="36" height="36" role="img">
+                <img src="assets/svg/logos/logo-white.svg" alt="Logo: Adopt-a-Tree"  width="36" height="36" role="img">
                 <div class="avatar text-center white spacing-3-b">
-                    <img src="assets/img/avatar/avatar-user.jpg" alt="Jenn Davis" width="144" height="144"
+                    <img src="assets/img/avatar/avatar-user.jpg" alt="Jenn Davis"  width="144" height="144"
                          class="avatar-img">
                     <div class="avatar-username spacing-half-t">Jenn Davis</div>
                     <div class="avatar-meta-info spacing-2-t">
@@ -154,11 +155,155 @@
                         </li>
                     </ul>
                 </div>
-                <div id="tab-payment" class="spacing-v">
-                    Content: Payment
+                <div id="tab-payment" class="spacing-2-t spacing-3-b">
+                    <div>
+                        <h6 class="text-center margin-reset spacing-half-b">Add Credit Card</h6>
+                        <div class="field padding-reset">
+                            <div class="input-group">
+                                <input type="text" class="input-group-text" placeholder="" id="card-holder-required"
+                                       required="">
+                                <label for="card-holder-required"
+                                       class="input-group-label font-size-xs form-required text-center">Card
+                                    Holder</label>
+                            </div>
+                        </div>
+                        <div class="field padding-reset">
+                            <div class="input-group">
+                                <input type="text" class="input-group-text" placeholder="" id="card-no-required"
+                                       required="">
+                                <label for="card-no-required"
+                                       class="input-group-label font-size-xs form-required text-center">Card No</label>
+                            </div>
+                        </div>
+                        <div class="row flex flex-wrap">
+                            <div class="col col-4">
+                                <div class="field">
+                                    <div class="input-group">
+                                        <input type="text" class="input-group-text" placeholder="XX" id="month-required"
+                                               required="">
+                                        <label for="month-required"
+                                               class="input-group-label font-size-xs form-required">MM</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col col-4">
+                                <div class="field">
+                                    <div class="input-group">
+                                        <input type="" class="input-group-text" placeholder="XXXX" id="year-required"
+                                               required="">
+                                        <label for="year-required" class="input-group-label font-size-xs form-required">YYYY</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col col-4">
+                                <div class="field">
+                                    <div class="input-group">
+                                        <input type="text" class="input-group-text" placeholder="XXX" id="CVC-required"
+                                               required="">
+                                        <label for="CVC-required" class="input-group-label font-size-xs form-required">CVC</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h6 class="text-center margin-reset spacing-half-b">Add Billing Address</h6>
+                        <div class="field">
+                            <div class="input-group">
+                                <input type="text" class="input-group-text" placeholder="" id="address-1-required"
+                                       required="">
+                                <label for="address-1-required"
+                                       class="input-group-label font-size-xs form-required text-center">Address
+                                    1</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="input-group">
+                                <input type="text" class="input-group-text" placeholder="" id="address-2">
+                                <label for="address-2" class="input-group-label font-size-xs form-required text-center">Address
+                                    2</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="input-group">
+                                <input type="text" class="input-group-text" placeholder="" id="city-required"
+                                       required="">
+                                <label for="city-required"
+                                       class="input-group-label font-size-xs form-required">City</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="input-group">
+                                <input type="text" class="input-group-text" placeholder="" id="pincode-required"
+                                       required="">
+                                <label for="pincode-required" class="input-group-label font-size-xs form-required">Pincode</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="input-group">
+                                <input type="text" class="input-group-text" placeholder="" id="state-required"
+                                       required="">
+                                <label for="state-required"
+                                       class="input-group-label font-size-xs form-required">State</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="input-group">
+                                <input type="text" class="input-group-text" placeholder="" id="country-required"
+                                       required="">
+                                <label for="country-required" class="input-group-label font-size-xs form-required">Country</label>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn--brand-2 full-width" tabindex="0" role="button">Save changes</button>
                 </div>
-                <div id="tab-profile" class="spacing-v">
-                    Content: Profile
+                <div id="tab-profile" class="spacing-2-t spacing-3-b">
+                    <div class="field text-center margin-reset spacing-2-b">
+                        <input type="file" accept="image/*" id="js-demo-input-file" class="input-file">
+                        <label for="js-demo-input-file" class="btn btn--brand-1 input-file-label">
+                            <img src="assets/img/avatar/avatar-user.jpg" alt="" class="input-file-img" id="js-demo-input-file-image" width="42" height="42" role="img">Upload Photo
+                        </label>
+                    </div>
+
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function() {
+                            document.getElementById("js-demo-input-file").addEventListener("change", function() {
+                                readURL(this, "js-demo-input-file-image");
+                            });
+                        });
+                    </script>
+                    <div class="field">
+                        <div class="input-group">
+                            <input type="text" class="input-group-text" placeholder="Jenn" id="first-name-required"
+                                   required="">
+                            <label for="first-name-required" class="input-group-label font-size-xs form-required">First
+                                Name</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="input-group">
+                            <input type="text" class="input-group-text" placeholder="Davis" id="last-name-required"
+                                   required="">
+                            <label for="last-name-required" class="input-group-label font-size-xs form-required">Last
+                                Name</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="input-group">
+                            <input type="email" class="input-group-text" placeholder="jenn.davis@gmail.com"
+                                   id="email-required" required="">
+                            <label for="email-required" class="input-group-label font-size-xs form-required">Email
+                                Id</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="input-group">
+                            <textarea class="form-text input-group-text" id="demo-textarea-default"
+                                      placeholder=""></textarea>
+                            <label for="demo-textarea-default" class="input-group-label font-size-xs form-required">Bio</label>
+                        </div>
+                    </div>
+                    <button class="btn btn--brand-2 full-width" tabindex="0" role="button">Save changes</button>
                 </div>
                 <script>
                     document.addEventListener("DOMContentLoaded", function () {
