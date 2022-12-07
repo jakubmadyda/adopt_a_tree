@@ -5,10 +5,11 @@
 
 // Sass Map to store spacing values
 $spacing-map: (
-    "spacing": $spacing,
-    "spacing-2": $spacing-2,
-    "spacing-3": $spacing-3,
-    "spacing-half": $spacing-half,
+        "spacing": $spacing,
+        "spacing-2": $spacing-2,
+        "spacing-3": $spacing-3,
+        "spacing-half": $spacing-half,
+        "spacing-xl": $spacing-xl,
 );
 
 // @each Sass loop to generate classes
