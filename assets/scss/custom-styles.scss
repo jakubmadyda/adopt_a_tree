@@ -4,3 +4,7 @@
     @extend .content-block;
     background-color: rgba($brand-2, 0.5);
 }
+
+.glider-slide-content {
+    min-width: 280px;
+}
