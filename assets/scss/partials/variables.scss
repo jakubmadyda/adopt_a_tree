@@ -62,6 +62,7 @@ $font-size: toRem(14px);
 $font-size-xs: toRem(10px);
 $font-size-sm: toRem(12px);
 $font-size-lg: toRem(16px);
+$font-size-xl: toRem(20px);
 
 // Fonts: headings: sizes
 $h1: toRem(24px);
@@ -91,8 +92,13 @@ $icon-size-xxl: toRem(24px);
 $spacing: toRem(10px);
 $spacing-2: ($spacing * 2);
 $spacing-3: ($spacing * 3);
+$spacing-4: ($spacing * 4);
+$spacing-5: ($spacing * 5);
+$spacing-6: ($spacing * 6);
+$spacing-7: ($spacing * 7);
+$spacing-8: ($spacing * 8);
 $spacing-half: math.div($spacing, 2);
-$spacing-xl: toRem(125px);
+$spacing-xl: toRem(138px);
 
 //----------------
 // VARIABLES: Transition
@@ -133,7 +139,7 @@ $svg-path: '../svg';
 // VARIABLES: media queries breakpoints
 $media-lg: toRem(1200px);
 $media-md: toRem(900px);
-$media-sm: toRem(600px);
+$media-sm: toRem(452px);
 
 $toRem1px: toRem(1px);
 
